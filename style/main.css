@@ -14,4 +14,8 @@
 .container .container-wrap {
   width: 95%;
   margin: 0 auto;
+}
+
+body #popular-categories {
+  background: #000;
 }/*# sourceMappingURL=main.css.map */

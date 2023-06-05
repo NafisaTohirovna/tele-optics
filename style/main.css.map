@@ -1,1 +1,1 @@
-{"version":3,"sources":["main.scss","main.css"],"names":[],"mappings":"AAKA;EACI,SAAA;EACA,UAAA;EACA,sBAAA;EACA,gBAAA;EACA,qBAAA;EACA,uBAAA;ACJJ;;ADOA;EACI,iBAAA;EACA,cAAA;ACJJ;ADKI;EACG,UAAA;EACA,cAAA;ACHP","file":"main.css"}
+{"version":3,"sources":["main.scss","main.css","../sass/_javohir.scss"],"names":[],"mappings":"AAOA;EACI,SAAA;EACA,UAAA;EACA,sBAAA;EACA,gBAAA;EACA,qBAAA;EACA,uBAAA;ACNJ;;ADSA;EACI,iBAAA;EACA,cAAA;ACNJ;ADOI;EACG,UAAA;EACA,cAAA;ACLP;;ACfI;EACI,gBAAA;ADkBR","file":"main.css"}
