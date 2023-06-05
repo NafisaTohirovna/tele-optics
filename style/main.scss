@@ -27,11 +27,23 @@ body{
     // header
     @include header();
 
+    // popular-categories
+    @include popular-categories();
+
+    // bestsellers 
+    @include bestsellers();
+
     // brands
     @include brands();
 
     // product 
     @include product();
+
+    // advantages
+    @include advantages();
+
+    // our-products
+    @include our-products();
 
     // about 
     @include about();
