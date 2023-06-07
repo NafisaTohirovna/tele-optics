@@ -4,9 +4,28 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  font-family: sans-serif;
 }
 
+@font-face {
+  font-family: "PT Root UI";
+  src: url(../font/pt-root-ui/PT\ Root\ UI_Bold.otf);
+  font-style: normal;
+}
+@font-face {
+  font-family: "PT Root UI";
+  src: url(../font/pt-root-ui/PT\ Root\ UI_Light.otf);
+  font-style: normal;
+}
+@font-face {
+  font-family: "PT Root UI";
+  src: url(../font/pt-root-ui/PT\ Root\ UI_Medium.otf);
+  font-style: normal;
+}
+@font-face {
+  font-family: "PT Root UI";
+  src: url(../font/pt-root-ui/PT\ Root\ UI_Regular.otf);
+  font-style: normal;
+}
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -29,6 +48,7 @@ body header nav .nav-top .container .container-wrap {
   align-items: center;
 }
 body header nav .nav-top .container .container-wrap a {
+  font-family: "PT Root UI";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -90,6 +110,15 @@ body header nav .nav-middle .container .container-wrap .nav-search input {
   outline: none;
 }
 body header nav .nav-middle .container .container-wrap .nav-search input::-moz-placeholder {
+  font-family: "PT Root UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #747883;
+}
+body header nav .nav-middle .container .container-wrap .nav-search input:-ms-input-placeholder {
+  font-family: "PT Root UI";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -97,6 +126,7 @@ body header nav .nav-middle .container .container-wrap .nav-search input::-moz-p
   color: #747883;
 }
 body header nav .nav-middle .container .container-wrap .nav-search input::placeholder {
+  font-family: "PT Root UI";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -166,6 +196,7 @@ body header nav .nav-menu .container .container-wrap .menu-link {
   padding: 13px 0;
 }
 body header nav .nav-menu .container .container-wrap .menu-link .menu-item a {
+  font-family: "PT Root UI";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
