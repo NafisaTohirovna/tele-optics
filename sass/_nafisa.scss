@@ -35,9 +35,69 @@
                                     padding: 5px;
                                     transition: all .5s ease;
                                     border-radius: 5px;
+                                    .dropdown {
+                                        position: relative;
+                                        display: inline-block;
+                                        .dropbtn{
+                                            background: transparent;
+                                            border: none;
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 5px;
+                                            i{
+                                                transition: all .5s ease;
+                                            }
+                                        }
+                                        .dropdown-content {
+                                            display: none;
+                                            position: absolute;
+                                            background-color: #f9f9f9;
+                                            min-width: 160px;
+                                            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                                            z-index: 1;
+                                        }
+                                        a{
+                                            color: black;
+                                            padding: 12px 16px;
+                                            text-decoration: none;
+                                            display: block;
+                                        }
+                                        a:nth-child(1){
+                                            display: none;
+                                        }
+                                        a:nth-child(2){
+                                            display: none;
+                                        }
+                                        a:nth-child(3){
+                                            display: none;
+                                        }
+                                        a:nth-child(4){
+                                            display: none;
+                                        }
+                                        a:nth-child(5){
+                                            display: none;
+                                        }
+                                        a:hover{
+                                            background: linear-gradient(0deg, #F1DA09, #F1DA09),
+                                                linear-gradient(0deg, #EEEE36, #EEEE36);
+                                            border-radius: 5px;
+                                        }
+                                        } 
+                                        .dropdown:hover .dropdown-content {
+                                        display: block;
+                                        }
+                                        .dropdown:hover .dropbtn {
+                                            i {
+                                                transform: rotate(180deg);
+                                            }
+                                        }
+
                                 }
                                 .nav-item:hover{
-                                    background: linear-gradient(0deg, #F1DA09, #F1DA09), linear-gradient(0deg, #EEEE36, #EEEE36), #0867D6;
+                                    background: linear-gradient(0deg, #F1DA09, #F1DA09), linear-gradient(0deg, #EEEE36, #EEEE36);
+                                }
+                                .nav-item:nth-child(6):hover{
+                                    background: transparent
                                 }
                             }
                         }
@@ -84,7 +144,7 @@
                                 position: absolute;
                                 right: 10px;
                                 top: 10px;
-                                background: #FFFFFF;
+                                background: #F7F8FB;
                                 padding-left: 10px;
                                 i{
                                     font-size: 20px;
@@ -159,11 +219,99 @@
                                         color: #747883;
                                     }
                                 }
+                                .dropdown {
+                                    position: relative;
+                                    display: inline-block;
+                                    .dropbtn{
+                                        background: transparent;
+                                        border: none;
+                                        font-family: 'PT Root UI';
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        font-size: 18px;
+                                        line-height: 24px;
+                                        color: #15191C;
+                                        padding-bottom: 6px;
+                                        transition: all .5s ease;
+                                        border-bottom: 2px solid transparent;
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 10px;
+                                        cursor: pointer;
+                                        i{
+                                            font-size: 15px;
+                                            transition: all .5s ease;
+                                        }
+                                    }
+                                    .dropdown-content {
+                                        display: none;
+                                        position: absolute;
+                                        background-color: #f9f9f9;
+                                        min-width: 120px;
+                                        right: -10px;
+                                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                                        z-index: 1;
+                                        a {
+                                            font-family: 'PT Root UI';
+                                            font-style: normal;
+                                            font-weight: 500;
+                                            font-size: 18px;
+                                            line-height: 24px;
+                                            color: #15191C;
+                                            padding-bottom: 6px;
+                                            transition: all .5s ease;
+                                            border-bottom: 2px solid transparent;
+                                            padding: 12px 16px;
+                                            text-decoration: none;
+                                            display: block;
+                                        }
+                                        a:hover{
+                                            color: #0867D6;
+                                            border-bottom: 2px solid #0867D6;
+                                        }
+                                        a:nth-child(1){
+                                            display: none;
+                                        }
+                                        a:nth-child(2){
+                                            display: none;
+                                        }
+                                        a:nth-child(3){
+                                            display: none;
+                                        }
+                                        a:nth-child(4){
+                                            display: none;
+                                        }
+                                        a:nth-child(5){
+                                            display: none;
+                                        }
+                                         a:nth-child(6){
+                                            display: none;
+                                        }
+                                        a:nth-child(7){
+                                            display: none;
+                                        }
+                                        a:nth-child(8){
+                                            display: none;
+                                        }
+                                    }
+                                }
+                                .dropdown:hover .dropdown-content {
+                                    display: block;
+                                }
+                                .dropdown:hover .dropbtn {
+                                    i {
+                                        transform: rotate(180deg);
+                                    }
+                                }
+
                             }
                             .menu-item:hover{
                                 a{
                                     color: #0867D6;
                                     border-bottom: 2px solid #0867D6;
+                                }
+                                .dropdown a{
+                                    border-bottom: none;
                                 }
                             }
                         }
@@ -271,6 +419,38 @@
                         }
                     }
                 }
+                .nav-menu{
+                    .container{
+                        .container-wrap{
+                            .menu-link{
+                                .menu-item:nth-child(7){
+                                    display: none;
+                                }
+                                .menu-item:nth-child(8){
+                                    display: none;
+                                }
+                                .menu-item:nth-child(9){
+                                    display: none;
+                                }
+                                .menu-item{
+                                    .dropdown{
+                                        .dropdown-content{
+                                             a:nth-child(6){
+                                                display: block;
+                                            }
+                                            a:nth-child(7){
+                                                display: block;
+                                            }
+                                            a:nth-child(8){
+                                                display: block;
+                                        }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -290,6 +470,19 @@
                                     }
                                     .nav-item:nth-child(5){
                                         display: none;
+                                    }
+                                    .dropdown{
+                                        .dropdown-content{
+                                            a:nth-child(3){
+                                                display: block;
+                                            }
+                                            a:nth-child(4){
+                                                display: block;
+                                            }
+                                            a:nth-child(5){
+                                                display: block;
+                                            }
+                                        }
                                     }
                                 }
                            }
@@ -330,6 +523,9 @@
                             }
                         }
                     }
+                }
+                .nav-menu{
+                    display: none;
                 }
             }
         }
