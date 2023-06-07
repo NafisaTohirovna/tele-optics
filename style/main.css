@@ -23,9 +23,16 @@ body #our-products {
   background-color: #f7f8fb;
   padding: 60px;
 }
+body #our-products .container-wrap h2 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 46px;
+  margin-bottom: 20px;
+}
 body #our-products .container-wrap .our-products-box {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 400px));
+  place-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   gap: 20px;
 }
 body #our-products .container-wrap .our-products-box .our-products-boxes {
@@ -48,10 +55,30 @@ body #our-products .container-wrap .our-products-box .our-products-boxes .our-pr
   flex-direction: column;
   gap: 15px;
 }
+body #our-products .container-wrap .our-products-box .our-products-boxes .our-products-boxes-right h5 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #15191c;
+}
 body #our-products .container-wrap .our-products-box .our-products-boxes .our-products-boxes-right .our-products-boxes-right-text {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
+}
+body #our-products .container-wrap .our-products-box .our-products-boxes .our-products-boxes-right .our-products-boxes-right-text p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #3a3f43;
+}
+body #our-products .container-wrap .our-products-box .our-products-boxes .our-products-boxes-right .our-products-boxes-right-text p span {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}
+body #our-products .container-wrap .our-products-box .our-products-boxes .our-products-boxes-right .our-products-boxes-right-text .our-products-boxes-right-text-special {
+  color: #3697e2;
 }
 body #our-products .container-wrap .our-products-box .our-products-boxes .our-products-boxes-right button {
   color: #3697e2;
@@ -66,4 +93,8 @@ body #our-products .container-wrap .our-products-box .our-products-boxes .our-pr
   height: 32px;
   border: 1px solid #e0e1e3;
   border-radius: 5px;
+}
+body #our-products .container-wrap .our-products-box .our-products-boxes .our-products-boxes-right button:hover {
+  background-color: #3697e2;
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */
