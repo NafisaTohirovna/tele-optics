@@ -1,7 +1,6 @@
 @mixin popular-categories {
   #popular-categories {
     .categories-text {
-      border: 1px solid red;
       h2 {
         font: {
           size: 32px;
@@ -36,7 +35,6 @@
       padding-top: 60px;
     }
     .categorie-hero {
-      border: 1px solid red;
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       margin-top: 25px;

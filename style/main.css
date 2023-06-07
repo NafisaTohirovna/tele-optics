@@ -17,7 +17,6 @@
 }
 
 body #popular-categories .categories-text {
-  border: 1px solid red;
   color: #15191c;
   display: flex;
   justify-content: space-between;
@@ -49,7 +48,6 @@ body #popular-categories .categories-text i:active {
   transition: 0.2s;
 }
 body #popular-categories .categorie-hero {
-  border: 1px solid red;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   margin-top: 25px;
