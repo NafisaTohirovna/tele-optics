@@ -1,13 +1,71 @@
-$grey: #F7F8FB;
+$grey: #f7f8fb;
+$grey-border: #e0e1e3;
+$white: #fff;
+$yellow: #f1da0980;
+$black: #15191c;
+$blue: #3697e2;
+
+@mixin d-column($gap) {
+  display: flex;
+  gap: $gap;
+}
 
 @mixin advantages {
-    #advantages{
-
-    }
+  #advantages {
+  }
 }
 @mixin our-products {
-    #our-products{
-        background-color: $grey;
-        padding: 60px;
+  #our-products {
+    background-color: $grey;
+    padding: 60px;
+    .container-wrap {
+      .our-products-box {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(330px, 400px));
+        gap: 20px;
+        .our-products-boxes {
+          @include d-column(20px);
+          padding: 25px;
+          background-color: white;
+          .our-products-boxes-left {
+            width: 70px;
+            height: 70px;
+            display: grid;
+            place-items: center;
+            background-color: $yellow;
+            padding: 19px 14px;
+            border-radius: 10px;
+
+       
+          }
+          .our-products-boxes-right {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            .our-products-boxes-right-text {
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+            }
+            button {
+              color: $blue;
+              background-color: $white;
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              padding: 6px 10px;
+              gap: 5px;
+
+              width: 130px;
+              height: 32px;
+
+              border: 1px solid $grey-border;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
     }
+  }
 }
