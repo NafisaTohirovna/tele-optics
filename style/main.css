@@ -16,6 +16,78 @@
   margin: 0 auto;
 }
 
-body #popular-categories {
-  background: #000;
+body #popular-categories .categories-text {
+  border: 1px solid red;
+  color: #15191c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 60px;
+}
+body #popular-categories .categories-text h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #15191c;
+}
+body #popular-categories .categories-text h4 {
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  align-items: center;
+  color: #15191c;
+}
+body #popular-categories .categories-text i {
+  border: 1px solid #d7d9dc;
+  border-radius: 5px;
+  padding: 8px 5px;
+  cursor: pointer;
+}
+body #popular-categories .categories-text i:active {
+  scale: 0.9;
+  transition: 0.2s;
+}
+body #popular-categories .categorie-hero {
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 25px;
+}
+body #popular-categories .categorie-hero .categories-hero-brand {
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  padding: 25px 20px;
+  row-gap: 10px;
+  border: 1px solid #e0e1e3;
+}
+body #popular-categories .categorie-hero .categories-hero-brand:hover {
+  box-shadow: 0px 5px 30px rgba(63, 66, 69, 0.15);
+  scale: 1.01;
+  transition: 0.3s;
+  background-color: #ffffff;
+  color: #0696e7;
+}
+body #popular-categories .categorie-hero .categories-hero-brand .image-bottom-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+body #popular-categories .categorie-hero .categories-hero-brand .image-bottom-text h5 {
+  font-size: 18px;
+  font-weight: 700;
+}
+body #popular-categories .categorie-hero .categories-hero-brand .image-bottom-text h6 {
+  color: #747883;
+  font-size: 14px;
+  font-weight: 400;
+}
+@media screen and (max-width: 860px) {
+  body #popular-categories .container .container-wrap .categorie-hero {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }/*# sourceMappingURL=main.css.map */
