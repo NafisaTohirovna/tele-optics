@@ -6,8 +6,12 @@ function showImg(e){
     let i;
     const img = document.querySelectorAll('.images img');
     const sliders = document.querySelectorAll('.btn-sliders span');
-    if(e > img.length){indexValue = 1}
-    if(e < 1){indexValue = img.length}
+    if(e > img.length){
+        indexValue = 1
+    }
+    if(e < 1){
+        indexValue = img.length
+    }
     for(i = 0; i < img.length; i++){
         img[i].style.display = "none";
     }
