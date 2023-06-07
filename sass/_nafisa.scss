@@ -15,7 +15,7 @@
                     .container-wrap{
                         @include d-flex();
                         a {
-                            // font-family: 'PT Root UI';
+                            font-family: 'PT Root UI';
                             font-style: normal;
                             font-weight: 400;                        font-size: 14px;
                             line-height: 18px;
@@ -72,7 +72,7 @@
                                 border-radius: 5px;
                                 outline:none;
                                 &::placeholder{
-                                    // font-family: 'PT Root UI';
+                                    font-family: 'PT Root UI';
                                     font-style: normal;
                                     font-weight: 400;
                                     font-size: 16px;
@@ -144,7 +144,7 @@
                             padding: 13px 0;
                             .menu-item{
                                 a{
-                                    // font-family: 'PT Root UI';
+                                    font-family: 'PT Root UI';
                                     font-style: normal;
                                     font-weight: 500;
                                     font-size: 18px;
@@ -173,9 +173,11 @@
             
         }
         .header-home{
+            padding: 20px 0 50px 0;
                 .container{
                     .container-wrap{
                         @include d-flex();
+                        gap: 16px;
                         .header-carousel{
                             margin-top: 40px;
                             filter: drop-shadow(10px 10px 40px rgba(0, 0, 0, 0.2));
@@ -246,6 +248,12 @@
                             .left{
                                 left: -18px;
                             }
+                        }
+                        .carousel1{
+                            flex: 3;
+                        }
+                        .carousel2{
+                            flex: 1;
                         }
                     }
                 }
