@@ -1,5 +1,329 @@
+@mixin d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 @mixin header {
     header{
-        
+        nav{
+            box-shadow: 0px 5px 30px rgba(63, 66, 69, 0.15);
+            .nav-top {
+                background: #F7F8F9;
+                padding: 10px 0;
+                .container{
+                    .container-wrap{
+                        @include d-flex();
+                        a {
+                            // font-family: 'PT Root UI';
+                            font-style: normal;
+                            font-weight: 400;                        font-size: 14px;
+                            line-height: 18px;
+                            display: flex;
+                            align-items: center;
+                            color: #15191C;
+                            gap: 5px;
+                            i{
+                                color: #747883;
+                            }
+                        }
+                        .nav-bar{
+                            .nav-link{
+                                @include d-flex();
+                                gap: 15px;
+                                .nav-item{
+                                    padding: 5px;
+                                    transition: all .5s ease;
+                                    border-radius: 5px;
+                                }
+                                .nav-item:hover{
+                                    background: linear-gradient(0deg, #F1DA09, #F1DA09), linear-gradient(0deg, #EEEE36, #EEEE36), #0867D6;
+                                }
+                            }
+                        }
+                        .nav-message-icons{
+                            @include d-flex();
+                            gap: 5px;
+                            span{
+                                @include d-flex();
+                                gap: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+            .nav-middle{
+                .container{
+                    .container-wrap{
+                        @include d-flex();
+                        gap: 20px;
+                        padding: 21px 0;
+                        .nav-search{
+                            width: 70%;
+                            position: relative;
+                            border: 1px solid #D7D9DC;
+                            border-radius: 5px;
+                            input{
+                                background: #F7F8FB;
+                                width: 100%;
+                                margin: 0 auto;
+                                padding: 13px 20px;
+                                border: 1px solid transparent;
+                                border-radius: 5px;
+                                outline:none;
+                                &::placeholder{
+                                    // font-family: 'PT Root UI';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 16px;
+                                    line-height: 22px;
+                                    color: #747883;
+                                }
+                            }
+                            a{
+                                position: absolute;
+                                right: 10px;
+                                top: 10px;
+                                background: #FFFFFF;
+                                padding-left: 10px;
+                                i{
+                                    font-size: 20px;
+                                    color: #535E69;
+                                }
+                            }
+                        }
+                        .sale-icons{
+                            @include d-flex();
+                            gap: 10px;
+                            a{
+                                transition: all .5s ease;
+                                width: 40px;
+                                height: 40px;
+                                @include d-flex();
+                                justify-content: center;
+                                position: relative;
+                                span{
+                                    top: 0;
+                                    right: -5px;
+                                    position: absolute;
+                                    display: block;
+                                    width: 20px;
+                                    height: 20px;
+                                    background: #D7D9DC;
+                                    border: 1px solid #FFFFFF;
+                                    box-shadow: 0px 5px 20px rgba(63, 66, 69, 0.05);
+                                    border-radius: 50%;
+                                    font-family: 'PT Root UI';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 12px;
+                                        line-height: 16px;
+                                        color: #FFFFFF;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                }
+                            }
+                            a:hover{
+                                img {
+                                        filter: brightness(95%) hue-rotate(349deg) saturate(1000%) contrast(1000%);
+                                        -webkit-filter: brightness(95%) hue-rotate(349deg) saturate(1000%) contrast(1000%);
+                                        -moz-filter: brightness(95%) hue-rotate(349deg) saturate(1000%) contrast(1000%);
+                                    }
+                            }
+                        }
+                    }
+                }
+            }
+            .nav-menu{
+                border-top: 1px solid #D7D9DC;
+                .container{
+                    .container-wrap{
+                        .menu-link{
+                            @include d-flex();
+                            padding: 13px 0;
+                            .menu-item{
+                                a{
+                                    // font-family: 'PT Root UI';
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    font-size: 18px;
+                                    line-height: 24px;
+                                    color: #15191C;
+                                    padding-bottom: 6px;
+                                    transition: all .5s ease;
+                                    border-bottom: 2px solid transparent;
+                                    i{
+                                        margin-left: 5px;
+                                        font-size: 15px;
+                                        color: #747883;
+                                    }
+                                }
+                            }
+                            .menu-item:hover{
+                                a{
+                                    color: #0867D6;
+                                    border-bottom: 2px solid #0867D6;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        .header-home{
+                .container{
+                    .container-wrap{
+                        @include d-flex();
+                        .header-carousel{
+                            margin-top: 40px;
+                            filter: drop-shadow(10px 10px 40px rgba(0, 0, 0, 0.2));
+                            border-radius: 20px;
+                            width: 540px;
+                            height: 340px;
+                            position: relative;
+                            text-align: center;
+                            border: 1px solid red;
+                            .content{
+                                width: 540px;
+                                height: 340px;
+                                overflow: hidden;
+                                border-radius: 20px;
+                                height: 100%;
+                                width: 100%;
+                                .images{
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                        
+                                    }
+                                }
+                            }
+                            .btn-sliders{
+                                width: 100%;
+                                position: absolute;
+                                bottom: -12px;
+                                opacity: 0.5;
+                                left: 50%;
+                                transform: translate(-50%);
+                                display: flex;
+                                justify-content: space-between;
+                                gap: 20px;
+                                span{
+                                    flex: 1;
+                                    width: 100% ;
+                                    height:4px;
+                                    display: inline-block;
+                                    background: #FFFFFF;
+                                    cursor: pointer;
+                                    transition: all .5s ease;
+                                    border-radius: 30px;
+                                }
+                                span:hover{
+                                        background: #4361EE;
+                                }
+                            }
+                            .slide{
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 40px;
+                            height: 40px;
+                            background: white;
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 50%;
+                            i{
+                                color: #AAAAAA;;
+                            }
+                            }
+                            .right{
+                                right: -18px;
+                            }
+                            .left{
+                                left: -18px;
+                            }
+                        }
+                    }
+                }
+        }
+    }
+    @media (max-width:1100px){
+        header{
+            nav{
+                .nav-top{
+                    .container{
+                        .container-wrap{
+                           .nav-gmail{
+                                display: none;
+                           }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width:950px) and (min-width:700px){
+        header{
+            nav{
+                .nav-top{
+                    .container{
+                        .container-wrap{
+                           .nav-bar{
+                                .nav-link{
+                                    .nav-item:nth-child(3){
+                                        display: none;
+                                    }
+                                    .nav-item:nth-child(4){
+                                        display: none;
+                                    }
+                                    .nav-item:nth-child(5){
+                                        display: none;
+                                    }
+                                }
+                           }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width:700px){
+        header{
+            nav{
+                .nav-top{
+                    background: #FFFFFF;
+                    display: none;
+                    .container{
+                        .container-wrap{
+                            flex-direction: column;
+                            align-items: start;
+                            .nav-bar{
+                                .nav-link{
+                                    flex-direction: column;
+                                    align-items: start;
+                                }
+                            }
+                            .nav-gmail{
+                                display: block;
+                            }
+                            .nav-message-icons{
+                                flex-direction: column;
+                                align-items: start;
+                                gap: 20px;
+                            }
+                            div{
+                                padding: 16px 0;
+                                width: 100%;
+                                border-bottom: 1px solid #D7D9DC;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
