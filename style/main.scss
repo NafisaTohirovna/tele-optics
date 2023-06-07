@@ -11,9 +11,33 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    font-family: sans-serif;
+    // font-family: sans-serif;
 }
 
+// Fonts
+@font-face {
+    font-family: "PT Root UI";
+    src: url(../font/pt-root-ui/PT\ Root\ UI_Bold.otf);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PT Root UI";
+    src: url(../font/pt-root-ui/PT\ Root\ UI_Light.otf);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PT Root UI";
+    src: url(../font/pt-root-ui/PT\ Root\ UI_Medium.otf);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PT Root UI";
+    src: url(../font/pt-root-ui/PT\ Root\ UI_Regular.otf);
+    font-style: normal;
+}
 .container{
     max-width: 1440px;
     margin: 0 auto;
