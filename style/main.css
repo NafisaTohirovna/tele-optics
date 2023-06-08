@@ -151,6 +151,18 @@ body header nav .nav-middle .container .container-wrap {
   gap: 20px;
   padding: 21px 0;
 }
+body header nav .nav-middle .container .container-wrap .nav-bars {
+  display: none;
+}
+body header nav .nav-middle .container .container-wrap .nav-bars span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #747883;
+  border-radius: 10px;
+}
 body header nav .nav-middle .container .container-wrap .nav-search {
   width: 70%;
   position: relative;
@@ -190,16 +202,19 @@ body header nav .nav-middle .container .container-wrap .nav-search input::placeh
   line-height: 22px;
   color: #747883;
 }
-body header nav .nav-middle .container .container-wrap .nav-search a {
+body header nav .nav-middle .container .container-wrap .nav-search .search {
   position: absolute;
   right: 10px;
   top: 10px;
   background: #F7F8FB;
   padding-left: 10px;
 }
-body header nav .nav-middle .container .container-wrap .nav-search a i {
+body header nav .nav-middle .container .container-wrap .nav-search .search i {
   font-size: 20px;
   color: #535E69;
+}
+body header nav .nav-middle .container .container-wrap .nav-search .call {
+  display: none;
 }
 body header nav .nav-middle .container .container-wrap .sale-icons {
   display: flex;
@@ -238,10 +253,29 @@ body header nav .nav-middle .container .container-wrap .sale-icons a span {
   align-items: center;
   justify-content: center;
 }
+body header nav .nav-middle .container .container-wrap .sale-icons a p {
+  font-family: "PT Root UI";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+  color: #3A3F43;
+  display: none;
+}
+body header nav .nav-middle .container .container-wrap .sale-icons a i {
+  color: #747883;
+  font-size: 25px;
+}
+body header nav .nav-middle .container .container-wrap .sale-icons a:nth-child(5) {
+  display: none;
+}
 body header nav .nav-middle .container .container-wrap .sale-icons a:hover img {
   filter: brightness(95%) hue-rotate(349deg) saturate(1000%) contrast(1000%);
   -webkit-filter: brightness(95%) hue-rotate(349deg) saturate(1000%) contrast(1000%);
   -moz-filter: brightness(95%) hue-rotate(349deg) saturate(1000%) contrast(1000%);
+}
+body header nav .nav-middle .container .container-wrap .sale-icons a:hover p {
+  color: #0867D6;
 }
 body header nav .nav-menu {
   border-top: 1px solid #D7D9DC;
@@ -443,6 +477,7 @@ body header .header-home .container .container-wrap .homeSwiper .swiper-wrapper 
   position: relative;
 }
 body header .header-home .container .container-wrap .homeSwiper .swiper-wrapper .home-item a {
+  font-family: "PT Root UI";
   position: absolute;
   left: 50px;
   bottom: 40px;
@@ -454,7 +489,7 @@ body header .header-home .container .container-wrap .homeSwiper .swiper-wrapper 
   align-items: center;
   color: #15191c;
   padding: 16px 30px;
-  background: rgba(241, 218, 9, 0.5019607843);
+  background: #F1DA09;
   border-radius: 3px;
   transition: all 0.3s ease;
 }
@@ -628,6 +663,9 @@ body header .header-home .container .container-wrap .homeSwiper2 .swiper-paginat
   body header nav .nav-top .container .container-wrap .nav-bar .nav-link .dropdown .dropdown-content a:nth-child(5) {
     display: block;
   }
+  body header .header-home .container .container-wrap .homeSwiper2 {
+    display: none;
+  }
 }
 @media (max-width: 700px) {
   body header nav .nav-top {
@@ -655,7 +693,99 @@ body header .header-home .container .container-wrap .homeSwiper2 .swiper-paginat
     width: 100%;
     border-bottom: 1px solid #D7D9DC;
   }
+  body header nav .nav-middle .container .container-wrap {
+    padding: 15px 0;
+  }
+  body header nav .nav-middle .container .container-wrap .nav-logo {
+    margin-left: 20px;
+  }
+  body header nav .nav-middle .container .container-wrap .nav-logo a {
+    width: 113px;
+    height: 36px;
+  }
+  body header nav .nav-middle .container .container-wrap .nav-logo a img {
+    width: 100%;
+  }
+  body header nav .nav-middle .container .container-wrap .nav-bars {
+    display: block;
+  }
+  body header nav .nav-middle .container .container-wrap .nav-bars.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  body header nav .nav-middle .container .container-wrap .nav-bars.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  body header nav .nav-middle .container .container-wrap .nav-bars.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  body header nav .nav-middle .container .container-wrap .nav-search {
+    border: none;
+  }
+  body header nav .nav-middle .container .container-wrap .nav-search input {
+    display: none;
+  }
+  body header nav .nav-middle .container .container-wrap .nav-search .call {
+    display: block;
+    text-align: right;
+    margin-right: 60px;
+  }
+  body header nav .nav-middle .container .container-wrap .nav-search .call a {
+    width: 10px;
+    height: 10px;
+  }
+  body header nav .nav-middle .container .container-wrap .nav-search .call a img {
+    width: 30px;
+  }
+  body header nav .nav-middle .container .container-wrap .nav-search .search {
+    top: 5px;
+    background: transparent;
+  }
+  body header nav .nav-middle .container .container-wrap .sale-icons {
+    padding: 30px;
+    width: 100%;
+    position: fixed;
+    background: #FFFFFF;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0px 5px 30px rgba(63, 66, 69, 0.15);
+  }
+  body header nav .nav-middle .container .container-wrap .sale-icons a {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 5px;
+  }
+  body header nav .nav-middle .container .container-wrap .sale-icons a span {
+    display: none;
+  }
+  body header nav .nav-middle .container .container-wrap .sale-icons a p {
+    display: block;
+  }
+  body header nav .nav-middle .container .container-wrap .sale-icons a:nth-child(5) {
+    display: block;
+    text-align: center;
+    display: flex;
+    gap: 10px;
+  }
   body header nav .nav-menu {
+    display: none;
+  }
+  body header .header-home .container .container-wrap .homeSwiper {
+    height: 250px;
+  }
+  body header .header-home .container .container-wrap .homeSwiper .hmsp {
+    display: none;
+  }
+  body header .header-home .container .container-wrap .homeSwiper a {
+    font-size: 14px;
+  }
+  body header .header-home .container .container-wrap .homeSwiper .home-prev-btn {
+    display: none;
+  }
+  body header .header-home .container .container-wrap .homeSwiper .home-next-btn {
+    display: none;
+  }
+  body header .header-home .container .container-wrap .homeSwiper2 {
     display: none;
   }
 }
