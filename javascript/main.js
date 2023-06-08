@@ -205,5 +205,19 @@ Array.from(Array(4).keys()).map((item) => {
   })
 })
 
+let heart = document.querySelectorAll(".item_poa a:nth-child(1) > img")
+let numberFor = heart.length
 
+Array.from(Array(numberFor).keys()).map((item) => {
+  heart[item].onclick = function(){
+    if(this.classList != 'red' ){
+    this.src = "./images/heart_red.svg" 
+    this.classList.add('red')
+  }
+  else{
+    this.src="./images/heart.svg";
+    this.classList.remove('red')
+    }
+  }
+})
 
