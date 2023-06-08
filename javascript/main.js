@@ -12,6 +12,8 @@ headerBars.addEventListener("click" , ()=>{
 
 navTeg.addEventListener("click",()=>{
     MenuLink.classList.toggle("active");
+    headerBars.classList.remove("active");
+    navMenu.classList.remove("active");
 })
 
 document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () =>{
@@ -20,6 +22,8 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
 }));
 Close.addEventListener("click" , ()=>{
   MenuLink.classList.remove("active");
+   headerBars.classList.toggle("active");
+    navMenu.classList.toggle("active");
 })
 
 
