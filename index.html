@@ -16,6 +16,9 @@
 
     <!-- style css -->
     <link rel="stylesheet" href="./style/main.css" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   </head>
   <body>
     <!-- header start -->
@@ -130,46 +133,72 @@
         <div class="header-home">
             <div class="container">
                 <div class="container-wrap">
-                    <div class="header-carousel carousel1">
-                        <div class="content">
-                            <div class="images">
-                                <img src="./img/slider-img.png" alt="">
-                                <img src="./img/slider-img.png" alt="">
-                                <img src="./img/slider-img.png" alt="">
-                                <img src="./img/slider-img.png" alt="">
-                            </div>
+                    <div class="swiper homeSwiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide home-item">
+                          <img src="images/home-1-1.png" alt="image" loading="lazy">
+                          <a href="#0">
+                            Подробнее
+                            <i class="fa fa-arrow-right"></i>
+                          </a>
                         </div>
-                        <div onclick="side_slide(-1)" class="slide left">
-                            <i class="fa-solid fa-chevron-left"></i>
+                        <div class="swiper-slide home-item">
+                          <img src="images/home-1-1.png" alt="image" loading="lazy">
+                          <a href="#0">
+                            Подробнее
+                            <i class="fa fa-arrow-right"></i>
+                          </a>
                         </div>
-                        <div onclick="side_slide(1)" class="slide right">
-                            <i class="fa-solid fa-chevron-right"></i>
+                        <div class="swiper-slide home-item">
+                          <img src="images/home-1-1.png" alt="image" loading="lazy">
+                          <a href="#0">
+                            Подробнее
+                            <i class="fa fa-arrow-right"></i>
+                          </a>
                         </div>
-                        <div class="btn-sliders">
-                            <span onclick="btn_slide(1)"></span>
-                            <span onclick="btn_slide(2)"></span>
-                            <span onclick="btn_slide(3)"></span>
-                            <span onclick="btn_slide(4)"></span>
+                        <div class="swiper-slide home-item">
+                          <img src="images/home-1-1.png" alt="image" loading="lazy">
+                          <a href="#0">
+                            Подробнее
+                            <i class="fa fa-arrow-right"></i>
+                          </a>
                         </div>
+                        <div class="swiper-slide home-item">
+                          <img src="images/home-1-1.png" alt="image" loading="lazy">
+                          <a href="#0">
+                            Подробнее
+                            <i class="fa fa-arrow-right"></i>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="home-prev-btn">
+                        <i class="fa fa-angle-left"></i>
+                      </div>
+                      <div class="home-next-btn">
+                        <i class="fa fa-angle-right"></i>
+                      </div>
+                      <div class="hmsp home-swiper-pagination"></div>
                     </div>
-                    <div class="header-carousel carousel2">
-                        <div class="content">
-                            <div class="images">
-                                <img src="./images/binokl.svg" alt="">
-                            </div>
+                    <div class="home-swiper-pagination"></div>
+                    <div class="swiper homeSwiper2">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide home-item2">
+                          <img src="images/home-2.png" alt="img">
                         </div>
-                        <div onclick="side_slide(-1)" class="slide left">
-                            <i class="fa-solid fa-chevron-left"></i>
+                        <div class="swiper-slide home-item2">
+                          <img src="images/home-2.png" alt="img">
                         </div>
-                        <div onclick="side_slide(1)" class="slide right">
-                            <i class="fa-solid fa-chevron-right"></i>
+                        <div class="swiper-slide home-item2">
+                          <img src="images/home-2.png" alt="img">
                         </div>
-                        <div class="btn-sliders">
-                            <span onclick="btn_slide(1)"></span>
-                            <span onclick="btn_slide(2)"></span>
-                            <span onclick="btn_slide(3)"></span>
-                            <span onclick="btn_slide(4)"></span>
-                        </div>
+                      </div>
+                      <div class="home2-prev-btn">
+                        <i class="fa fa-angle-left"></i>
+                      </div>
+                      <div class="home2-next-btn">
+                        <i class="fa fa-angle-right"></i>
+                      </div>
+                      <div class="home2-swiper-pagination"></div>
                     </div>
                 </div>
             </div>
@@ -178,7 +207,7 @@
     <!-- header end -->
 
     <!-- Popular categories start -->
-    <!-- <section id="popular-categories">
+    <section id="popular-categories">
       <div class="container">
         <div class="container-wrap">
           <div class="categories-text">
@@ -282,7 +311,7 @@
           <h2>Популярные категории</h2>
         </div>
       </div>
-    </section> -->
+    </section>
     <!-- Popular categories end -->
 
     <!-- Bestsellers start -->
@@ -318,7 +347,7 @@
     <!-- Advantages end -->
 
     <!-- Our products start -->
-    <!-- <section id="our-products">
+    <section id="our-products">
       <div class="container">
         <div class="container-wrap"></div>
         <div class="container-wrap">
@@ -362,9 +391,9 @@
                   <p>Любительский<span> (32)</span></p>
                 </div>
 
-                <!-- <button>
+                <button>
                   Показать все <i class="fa-solid fa-ellipsis"></i>
-                </button> -->
+                </button>
               </div>
             </div>
             <div class="our-products-boxes">
@@ -531,6 +560,8 @@
     <!-- footer end -->
   </body>
     
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <script src="./javascript/main.js"></script>
 </body>
