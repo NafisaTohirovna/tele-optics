@@ -6,6 +6,10 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: "PT Root UI";
   src: url(../font/pt-root-ui/PT\ Root\ UI_Bold.otf);
@@ -1454,6 +1458,7 @@ body #advantages .container-wrap {
   margin: 85px auto;
 }
 body #advantages .container-wrap .advantages-types {
+  cursor: pointer;
   flex: 1;
   min-width: 260px;
   max-width: 360px;
@@ -1463,6 +1468,7 @@ body #advantages .container-wrap .advantages-types {
   border-radius: 5px;
   background-color: #f2f5f9;
   padding: 25px 30px;
+  transition: all 0.5s ease;
 }
 body #advantages .container-wrap .advantages-types p {
   font-family: "PT Root UI";
@@ -1470,6 +1476,9 @@ body #advantages .container-wrap .advantages-types p {
   font-size: 18px;
   line-height: 24px;
   color: #3a3f43;
+}
+body #advantages .container-wrap .advantages-types:hover {
+  box-shadow: 0px 5px 30px rgba(63, 66, 69, 0.15);
 }
 body #our-products {
   background-color: #f7f8fb;
@@ -1545,8 +1554,10 @@ body #our-products .container-wrap .our-products-box .our-products-boxes .our-pr
   align-items: center;
   padding: 6px 10px;
   gap: 5px;
+  cursor: pointer;
   width: 130px;
   height: 32px;
+  transition: all 0.5s ease;
   border: 1px solid #e0e1e3;
   border-radius: 5px;
 }
@@ -1594,7 +1605,7 @@ body #about .container .container-wrap ul li {
   font-size: 16px;
   line-height: 22px;
   color: #3A3F43;
-  list-style-type: circle;
+  list-style-type: disc;
 }
 body footer .footer_top {
   background-color: #535E69;
@@ -1785,6 +1796,9 @@ body footer .footer_bottom .container .container-wrap p {
   }
   body footer .footer-main .container .container-wrap {
     flex-direction: column;
+  }
+  body footer .footer-main .container .container-wrap .footer_section_2 .footer_btn button {
+    width: 100%;
   }
   body footer .footer-main .container .container-wrap .footer_section {
     width: 100%;

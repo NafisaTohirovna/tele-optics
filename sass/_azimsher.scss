@@ -21,6 +21,7 @@ $blue: #3697e2;
       gap: 30px;
       margin: 85px auto;
       .advantages-types {
+        cursor: pointer;
         flex: 1;
         min-width: 260px;
         max-width: 360px;
@@ -30,7 +31,7 @@ $blue: #3697e2;
         border-radius: 5px;
         background-color: $bluelike-grey;
         padding: 25px 30px;
-
+        transition: all .5s ease;
         p {
           font-family: "PT Root UI";
           font-weight: 500;
@@ -39,6 +40,9 @@ $blue: #3697e2;
 
           color: $grey-another;
         }
+      }
+      .advantages-types:hover{
+        box-shadow: 0px 5px 30px rgba(63, 66, 69, 0.15);
       }
     }
   }
@@ -96,7 +100,6 @@ $blue: #3697e2;
                 font-size: 16px;
                 line-height: 22px;
                 //  display: flex;
-
                 color: $grey-another;
                 span {
                   font-weight: 500;
@@ -118,10 +121,10 @@ $blue: #3697e2;
               align-items: center;
               padding: 6px 10px;
               gap: 5px;
-
+              cursor: pointer;
               width: 130px;
               height: 32px;
-
+              transition: all .5s ease;
               border: 1px solid $grey-border;
               border-radius: 5px;
               &:hover {

@@ -13,7 +13,9 @@
     text-decoration: none;
     // font-family: sans-serif;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 // Fonts
 @font-face {
     font-family: "PT Root UI";
