@@ -27,6 +27,9 @@
                                 color: #747883;
                             }
                         }
+                        .nav-teg{
+                            display: none;
+                        }
                         .nav-bar{
                             .nav-link{
                                 @include d-flex();
@@ -97,8 +100,26 @@
                                 .nav-item:hover{
                                     background: linear-gradient(0deg, #F1DA09, #F1DA09), linear-gradient(0deg, #EEEE36, #EEEE36);
                                 }
-                                .nav-item:nth-child(6):hover{
-                                    background: transparent
+                                .nav-item:nth-child(6){
+                                    display: none;
+                                }
+                                .nav-item:nth-child(7){
+                                    display: none;
+                                }
+                                .nav-item:nth-child(8){
+                                    display: none;
+                                }
+                                .nav-item:nth-child(9){
+                                    display: none;
+                                }
+                                .nav-item:nth-child(10){
+                                    display: none;
+                                }
+                                .nav-item:nth-child(11){
+                                    display: none;
+                                }
+                                .nav-item:nth-child(12):hover{
+                                    background: transparent;
                                 }
                             }
                         }
@@ -121,6 +142,7 @@
                         padding: 21px 0;
                         .nav-bars{
                             display: none;
+                            cursor: pointer;
                             span {
                                     display: block;
                                     width: 25px;
@@ -223,6 +245,9 @@
                                         -moz-filter: brightness(95%) hue-rotate(349deg) saturate(1000%) contrast(1000%);
                                     }
                                     p{
+                                        color: #0867D6;
+                                    }
+                                    i{
                                         color: #0867D6;
                                     }
                             }
@@ -703,24 +728,70 @@
     @media (max-width:700px){
         header{
             nav{
+                position: fixed;
+                z-index: 50;
+                background: #FFFFFF;
+                width: 100%;
                 .nav-top{
                     display: none;
                 }
                 .nav-top.active{
                     display: block;
                     background: #FFFFFF;
-                    position: fixed;
-                    top: 80px;
+                    position: absolute;
+                    top:60px;
                     width: 100%;
                     z-index: 16;
                     .container{
                         .container-wrap{
                             flex-direction: column;
                             align-items: start;
+                            .nav-teg{
+                                display: block;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                a{
+                                    font-family: 'PT Root UI';
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        font-size: 16px;
+                                        line-height: 22px;
+                                        color: #0867D6;
+                                }
+                                span{
+                                    a i{
+                                        color: #3A3F43;
+                                        font-size: 17px;
+                                        margin-right: 10px;
+                                    }
+                                }
+                            }
                             .nav-bar{
                                 .nav-link{
                                     flex-direction: column;
                                     align-items: start;
+                                    .dropdown{
+                                        display: none;
+                                    }
+                                }
+                                .nav-item:nth-child(6){
+                                    display: block;
+                                }
+                                .nav-item:nth-child(7){
+                                    display: block;
+                                }
+                                .nav-item:nth-child(8){
+                                    display: block;
+                                }
+                                .nav-item:nth-child(9){
+                                    display: block;
+                                }
+                                .nav-item:nth-child(10){
+                                    display: block;
+                                }
+                                .nav-item:nth-child(11){
+                                    display: block;
                                 }
                             }
                             .nav-gmail{
@@ -824,6 +895,7 @@
                 }
             }
             .header-home{
+                padding-top: 100px;
                 .container{
                     .container-wrap{
                         .homeSwiper{
@@ -840,6 +912,16 @@
                             .home-next-btn{
                                 display: none;
                             }
+                            .swiper-wrapper {
+                                    .home-item {
+                                        a {
+                                            left: 20px;
+                                            bottom: 20px;
+                                            padding: 16px 30px;
+                                            font-size: 15px;
+                                        }
+                                    }
+                                }
                             
                         }
                         .homeSwiper2{
