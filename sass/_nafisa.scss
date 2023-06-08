@@ -366,6 +366,12 @@
                                 }
 
                             }
+                            .nav-teg{
+                                display: none;
+                            }
+                            .close{
+                                display: none;
+                            }
                             .menu-item:hover{
                                 a{
                                     color: #0867D6;
@@ -733,82 +739,102 @@
                 background: #FFFFFF;
                 width: 100%;
                 .nav-top{
-                    display: none;
-                }
-                .nav-top.active{
-                    display: block;
+                    left: -100%;
                     background: #FFFFFF;
-                    position: absolute;
-                    top:60px;
-                    width: 100%;
-                    z-index: 16;
-                    .container{
-                        .container-wrap{
-                            flex-direction: column;
-                            align-items: start;
-                            .nav-teg{
-                                display: block;
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-between;
-                                a{
-                                    font-family: 'PT Root UI';
+                        overflow-y: scroll;
+                        height: 100%;
+                        position: fixed;
+                        top: 60px;
+                        width: 100%;
+                        z-index: 16;
+                    transition: all .5s ease;
+                        .container {
+                            .container-wrap {
+                                flex-direction: column;
+                                align-items: start;
+                    
+                                .nav-teg {
+                                    display: block;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                    
+                                    a {
+                                        font-family: 'PT Root UI';
                                         font-style: normal;
                                         font-weight: 500;
                                         font-size: 16px;
                                         line-height: 22px;
                                         color: #0867D6;
-                                }
-                                span{
-                                    a i{
-                                        color: #3A3F43;
-                                        font-size: 17px;
-                                        margin-right: 10px;
+                                    }
+                    
+                                    span {
+                                        a i {
+                                            color: #3A3F43;
+                                            font-size: 17px;
+                                            margin-right: 10px;
+                                        }
                                     }
                                 }
-                            }
-                            .nav-bar{
-                                .nav-link{
+                    
+                                .nav-bar {
+                                    .nav-link {
+                                        flex-direction: column;
+                                        align-items: start;
+                    
+                                        .nav-item{
+                                            .dropdown {
+                                                    display: none;
+                                                }
+                                        }
+                                        .nav-item:nth-child(6) {
+                                            display: block;
+                                        }
+                        
+                                        .nav-item:nth-child(7) {
+                                            display: block;
+                                        }
+                        
+                                        .nav-item:nth-child(8) {
+                                            display: block;
+                                        }
+                        
+                                        .nav-item:nth-child(9) {
+                                            display: block;
+                                        }
+                        
+                                        .nav-item:nth-child(10) {
+                                            display: block;
+                                        }
+                        
+                                        .nav-item:nth-child(11) {
+                                            display: none;
+                                        }
+                                    }
+                    
+                                    
+                                }
+                    
+                                .nav-gmail {
+                                    display: block;
+                                }
+                    
+                                .nav-message-icons {
                                     flex-direction: column;
                                     align-items: start;
-                                    .dropdown{
-                                        display: none;
-                                    }
+                                    gap: 20px;
                                 }
-                                .nav-item:nth-child(6){
-                                    display: block;
+                    
+                                div {
+                                    padding: 16px 0;
+                                    width: 100%;
+                                    border-bottom: 1px solid #D7D9DC;
                                 }
-                                .nav-item:nth-child(7){
-                                    display: block;
-                                }
-                                .nav-item:nth-child(8){
-                                    display: block;
-                                }
-                                .nav-item:nth-child(9){
-                                    display: block;
-                                }
-                                .nav-item:nth-child(10){
-                                    display: block;
-                                }
-                                .nav-item:nth-child(11){
-                                    display: block;
-                                }
-                            }
-                            .nav-gmail{
-                                display: block;
-                            }
-                            .nav-message-icons{
-                                flex-direction: column;
-                                align-items: start;
-                                gap: 20px;
-                            }
-                            div{
-                                padding: 16px 0;
-                                width: 100%;
-                                border-bottom: 1px solid #D7D9DC;
                             }
                         }
-                    }
+                }
+                .nav-top.active{
+                left: 0;
                 }
                 .nav-middle{
                     .container{
@@ -890,8 +916,72 @@
                         }
                     }
                 }
-                .nav-menu{
-                    display: none;
+                .nav-menu{ 
+                    .container{
+                        .container-wrap{
+                            .menu-link{
+                                position: fixed;
+                                background: #FFFFFF;
+                                flex-direction: column;
+                                align-items: start;
+                                width: 100%;
+                                height: 100%;
+                                overflow-y: scroll;
+                                justify-content: start;
+                                right: -100%;
+                                transition: all .5s ease;
+                                .close{
+                                    display: block;
+                                    transition: all .5s ease;
+                                    a{
+                                        display: flex;
+                                            align-items: center;
+                                            gap: 10px;
+                                    }
+                                }
+                                .menu-item{
+                                    width: 100%;
+                                    border-bottom: 1px solid #D7D9DC;
+                                    padding: 15px;
+                                  
+                                }
+                                  .nav-teg {
+                                            display: block;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-between;
+                                    
+                                            a {
+                                                font-family: 'PT Root UI';
+                                                font-style: normal;
+                                                font-weight: 500;
+                                                font-size: 16px;
+                                                line-height: 22px;
+                                                color: #0867D6;
+                                                display: flex;
+                                                align-items: center;
+                                                gap: 10px;
+                                            }
+                                    
+                                            span {
+                                                a i {
+                                                    color: #3A3F43;
+                                                    font-size: 17px;
+                                                    margin-right: 10px;
+                                                }
+                                            }
+                                        }
+                                .menu-item:nth-child(12){
+                                    display: none;
+                                }
+                            }
+                            .menu-link.active{
+                                right: 0;
+                                transition: all .5s ease;
+                                z-index: 19;
+                            }
+                        }
+                    }
                 }
             }
             .header-home{

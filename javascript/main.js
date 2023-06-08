@@ -1,15 +1,27 @@
 const headerBars = document.querySelector('.nav-bars');
 const navMenu = document.querySelector('.nav-top');
+const navTeg = document.querySelector('.ochish');
+const MenuLink = document.querySelector(".menu-link");
+const Close = document.querySelector(".close");
+
 
 headerBars.addEventListener("click" , ()=>{
     headerBars.classList.toggle("active");
     navMenu.classList.toggle("active");
 })
 
+navTeg.addEventListener("click",()=>{
+    MenuLink.classList.toggle("active");
+})
+
 document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () =>{
     headerBars.classList.remove("active");
     navMenu.classList.remove("active");
 }));
+Close.addEventListener("click" , ()=>{
+  MenuLink.classList.remove("active");
+})
+
 
 // Header section swiper start
 
@@ -49,5 +61,6 @@ homeSwiper();
 
 // Header section swiper end
 
+// o'ktamni qismi boshlandi 
 
 
