@@ -704,8 +704,15 @@
         header{
             nav{
                 .nav-top{
-                    background: #FFFFFF;
                     display: none;
+                }
+                .nav-top.active{
+                    display: block;
+                    background: #FFFFFF;
+                    position: fixed;
+                    top: 80px;
+                    width: 100%;
+                    z-index: 16;
                     .container{
                         .container-wrap{
                             flex-direction: column;
@@ -788,6 +795,7 @@
                                 background: #FFFFFF;
                                 bottom: 0;
                                 left: 0;
+                                z-index: 15;
                                 box-shadow: 0px 5px 30px rgba(63, 66, 69, 0.15);
                                 a{
                                     display: flex;

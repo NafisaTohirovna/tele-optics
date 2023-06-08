@@ -1,5 +1,5 @@
 const headerBars = document.querySelector('.nav-bars');
-const navMenu = document.querySelector('.nav-menu');
+const navMenu = document.querySelector('.nav-top');
 
 headerBars.addEventListener("click" , ()=>{
     headerBars.classList.toggle("active");
