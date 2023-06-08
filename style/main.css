@@ -208,14 +208,6 @@ body header nav .nav-middle .container .container-wrap .nav-search input::-moz-p
   line-height: 22px;
   color: #747883;
 }
-body header nav .nav-middle .container .container-wrap .nav-search input:-ms-input-placeholder {
-  font-family: "PT Root UI";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-  color: #747883;
-}
 body header nav .nav-middle .container .container-wrap .nav-search input::placeholder {
   font-family: "PT Root UI";
   font-style: normal;
@@ -1081,6 +1073,9 @@ body #bestsellers .container-wrap .slider .slider_in, body #product .container-w
   overflow: scroll;
   height: 425px;
 }
+body #bestsellers .container-wrap .slider .slider_in::-webkit-scrollbar, body #product .container-wrap .slider .slider_in::-webkit-scrollbar {
+  display: none;
+}
 body #bestsellers .container-wrap .slider .slider_in .item, body #product .container-wrap .slider .slider_in .item {
   padding: 10px 20px 20px;
   min-width: 278px;
@@ -1245,8 +1240,7 @@ body #bestsellers .container-wrap .slider .slider_in .item .flex_batton div span
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-  -webkit-text-decoration-line: line-through;
-          text-decoration-line: line-through;
+  text-decoration-line: line-through;
   color: #9a9c9e;
 }
 body #bestsellers .container-wrap .slider .slider_in .item .flex_batton div:nth-child(2), body #product .container-wrap .slider .slider_in .item .flex_batton div:nth-child(2) {
@@ -1523,21 +1517,11 @@ body #brands .corusel .item {
   left: 0;
   cursor: pointer;
   transition: all 0.3s ease;
-  -webkit-animation: anime 5s linear infinite;
-          animation: anime 5s linear infinite;
-  -webkit-animation-delay: calc(var(--j) * -1s);
-          animation-delay: calc(var(--j) * -1s);
+  animation: anime 5s linear infinite;
+  animation-delay: calc(var(--j) * -1s);
 }
 body #brands .corusel .item:hover {
   transform: scale(0.9);
-}
-@-webkit-keyframes anime {
-  from {
-    left: -15%;
-  }
-  to {
-    left: 110%;
-  }
 }
 @keyframes anime {
   from {
@@ -1623,7 +1607,6 @@ body #product .flex button div {
   background-color: #3697e2;
   border: 1px solid #0696e7;
 }
-<<<<<<< HEAD
 @media screen and (max-width: 1010px) {
   body #product div:first-child {
     overflow: hidden;
@@ -1636,7 +1619,7 @@ body #product .flex button div {
     line-height: 24px;
     padding: 3px 5px;
   }
-=======
+}
 body #advantages .container-wrap {
   display: flex;
   justify-content: space-evenly;
@@ -1661,7 +1644,6 @@ body #advantages .container-wrap .advantages-types p {
   font-size: 18px;
   line-height: 24px;
   color: #3a3f43;
->>>>>>> 6bdd10e5a4e3e888d2e9e52d7797be4faef30b39
 }
 body #our-products {
   background-color: #f7f8fb;

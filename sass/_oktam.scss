@@ -76,9 +76,9 @@
           overflow: scroll;
           height: 425px;
 
-          // &::-webkit-scrollbar {
-          //   display: none;
-          // }
+          &::-webkit-scrollbar {
+            display: none;
+          }
 
           .item {
             padding: 10px 20px 20px;
