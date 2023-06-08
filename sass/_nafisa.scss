@@ -37,7 +37,7 @@
                                 .nav-item{
                                     padding: 5px;
                                     transition: all .5s ease;
-                                    border-radius: 5px;
+                                    border-bottom: 2px solid transparent;
                                     .dropdown {
                                         z-index: 3;
                                         position: relative;
@@ -65,6 +65,8 @@
                                             padding: 12px 16px;
                                             text-decoration: none;
                                             display: block;
+                                            border-bottom: 2px solid transparent;
+                                            transition: all .5s ease;
                                         }
                                         a:nth-child(1){
                                             display: none;
@@ -82,9 +84,7 @@
                                             display: none;
                                         }
                                         a:hover{
-                                            background: linear-gradient(0deg, #F1DA09, #F1DA09),
-                                                linear-gradient(0deg, #EEEE36, #EEEE36);
-                                            border-radius: 5px;
+                                            border-bottom: 2px solid #0867D6;
                                         }
                                         } 
                                         .dropdown:hover .dropdown-content {
@@ -98,7 +98,20 @@
 
                                 }
                                 .nav-item:hover{
+                                    border-bottom: 2px solid #0867D6;
+                                    a{
+                                        color: #0867D6;
+                                    }
+                                }
+                                .nav-item:nth-child(4){
+                                    border-radius: 5px;
                                     background: linear-gradient(0deg, #F1DA09, #F1DA09), linear-gradient(0deg, #EEEE36, #EEEE36);
+                                    &:hover{
+                                        border: none;
+                                        a{
+                                            color: #535E69;
+                                        }
+                                    }
                                 }
                                 .nav-item:nth-child(6){
                                     display: none;
