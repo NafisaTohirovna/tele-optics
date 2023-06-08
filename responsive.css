@@ -1,0 +1,9 @@
+@media screen and (max-width: 728px) {
+  .categorie-hero {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .categorie-hero .categories-hero-brand {
+    padding: 25px 40px;
+  }
+}/*# sourceMappingURL=responsive.css.map */

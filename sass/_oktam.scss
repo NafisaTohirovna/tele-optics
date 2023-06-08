@@ -14,11 +14,9 @@
 @mixin bestsellers {
   #bestsellers {
     background: #f7f8fb;
-    padding: 60px 130px;
+    padding: 60px 0;
 
     .container-wrap {
-      max-width: 1180px;
-      margin: 0 auto;
       & > .flex {
         @include flex(space-between);
         margin-bottom: 20px;
@@ -299,12 +297,7 @@
 @mixin brands {
   #brands {
     background-color: white;
-    padding: 60px 135px;
-
-    .container-wrap{
-        max-width: 1180px;
-        margin: 0 auto;
-    }
+    padding: 60px 0;
 
     .flex {
       @include flex(space-between);

@@ -1,5 +1,103 @@
 @mixin popular-categories {
-    #popular-categories{
-        background: #000;
+  #popular-categories {
+    .container{
+      .container-wrap{
+
+      }
     }
+    .categories-text {
+      h2 {
+        font: {
+          size: 32px;
+          weight: 700;
+        }
+        color: #15191c;
+      }
+      h4 {
+        font: {
+          size: 16px;
+          weight: 500;
+        }
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+        color: #15191c;
+      }
+      i {
+        border: 1px solid #d7d9dc;
+        border-radius: 5px;
+        padding: 8px 5px;
+        cursor: pointer;
+        &:active {
+          scale: 0.9;
+          transition: 0.2s;
+        }
+      }
+      color: #15191c;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 60px;
+    }
+    .categorie-hero {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      margin-top: 25px;
+      .categories-hero-brand {
+        display: flex;
+        cursor: pointer;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        padding: 25px 20px;
+        row-gap: 10px;
+        border: 1px solid #e0e1e3;
+        &:hover {
+          box-shadow: 0px 5px 30px rgba(63, 66, 69, 0.15);
+          scale: 1.01;
+          transition: 0.3s;
+          background-color: #ffffff;
+          color: #0696e7;
+        }
+
+        .image-bottom-text {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          h5 {
+            font: {
+              size: 18px;
+              weight: 700;
+            }
+          }
+          h6 {
+            color: #747883;
+            font: {
+              size: 14px;
+              weight: 400;
+            }
+          }
+        }
+      }
+    }
+  
+
+  
+}
+@media screen and (max-width: 860px) {
+  #popular-categories {
+    .container {
+      .container-wrap {
+        .categorie-hero {
+          grid-template-columns: repeat(3, 1fr);
+
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 345px) {}
 }
