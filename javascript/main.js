@@ -1,3 +1,16 @@
+const headerBars = document.querySelector('.nav-bars');
+const navMenu = document.querySelector('.nav-top');
+
+headerBars.addEventListener("click" , ()=>{
+    headerBars.classList.toggle("active");
+    navMenu.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () =>{
+    headerBars.classList.remove("active");
+    navMenu.classList.remove("active");
+}));
+
 // Header section swiper start
 
 const mobileMediaQuery = window.matchMedia("(max-width: 550px)");
@@ -37,4 +50,5 @@ homeSwiper();
 // Header section swiper end
 
 // o'ktamni qismi boshlandi 
+
 

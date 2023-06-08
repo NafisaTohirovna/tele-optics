@@ -1,6 +1,7 @@
 $grey: #f7f8fb;
 $grey-border: #e0e1e3;
 $grey-another: #3a3f43;
+$bluelike-grey: #f2f5f9;
 $white: #fff;
 $yellow: #f1da0980;
 $black: #15191c;
@@ -13,14 +14,43 @@ $blue: #3697e2;
 
 @mixin advantages {
   #advantages {
+    .container-wrap {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin: 85px auto;
+      .advantages-types {
+        flex: 1;
+        min-width: 260px;
+        max-width: 360px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        background-color: $bluelike-grey;
+        padding: 25px 30px;
+
+        p {
+          font-family: "PT Root UI";
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 24px;
+
+          color: $grey-another;
+        }
+      }
+    }
   }
 }
+
 @mixin our-products {
   #our-products {
     background-color: $grey;
     padding: 60px;
     .container-wrap {
       h2 {
+        font-family: "PT Root UI";
         font-weight: 700;
         font-size: 32px;
         line-height: 46px;
@@ -49,6 +79,7 @@ $blue: #3697e2;
             flex-direction: column;
             gap: 15px;
             h5 {
+              font-family: "PT Root UI";
               font-weight: 700;
               font-size: 18px;
               line-height: 24px;
@@ -60,6 +91,7 @@ $blue: #3697e2;
               flex-direction: column;
               gap: 10px;
               p {
+                font-family: "PT Root UI";
                 font-weight: 500;
                 font-size: 16px;
                 line-height: 22px;
@@ -77,6 +109,7 @@ $blue: #3697e2;
               }
             }
             button {
+              font-family: "PT Root UI";
               color: $blue;
               background-color: $white;
               display: flex;
