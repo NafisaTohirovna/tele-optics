@@ -35,9 +35,70 @@
                                     padding: 5px;
                                     transition: all .5s ease;
                                     border-radius: 5px;
+                                    .dropdown {
+                                        z-index: 3;
+                                        position: relative;
+                                        display: inline-block;
+                                        .dropbtn{
+                                            background: transparent;
+                                            border: none;
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 5px;
+                                            i{
+                                                transition: all .5s ease;
+                                            }
+                                        }
+                                        .dropdown-content {
+                                            display: none;
+                                            position: absolute;
+                                            background-color: #f9f9f9;
+                                            min-width: 160px;
+                                            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                                            z-index: 1;
+                                        }
+                                        a{
+                                            color: black;
+                                            padding: 12px 16px;
+                                            text-decoration: none;
+                                            display: block;
+                                        }
+                                        a:nth-child(1){
+                                            display: none;
+                                        }
+                                        a:nth-child(2){
+                                            display: none;
+                                        }
+                                        a:nth-child(3){
+                                            display: none;
+                                        }
+                                        a:nth-child(4){
+                                            display: none;
+                                        }
+                                        a:nth-child(5){
+                                            display: none;
+                                        }
+                                        a:hover{
+                                            background: linear-gradient(0deg, #F1DA09, #F1DA09),
+                                                linear-gradient(0deg, #EEEE36, #EEEE36);
+                                            border-radius: 5px;
+                                        }
+                                        } 
+                                        .dropdown:hover .dropdown-content {
+                                        display: block;
+                                        }
+                                        .dropdown:hover .dropbtn {
+                                            i {
+                                                transform: rotate(180deg);
+                                            }
+                                        }
+
                                 }
                                 .nav-item:hover{
-                                    background: linear-gradient(0deg, #F1DA09, #F1DA09), linear-gradient(0deg, #EEEE36, #EEEE36), #0867D6;
+                                    background: linear-gradient(0deg, #F1DA09, #F1DA09), linear-gradient(0deg, #EEEE36, #EEEE36);
+                                }
+                                .nav-item:nth-child(6):hover{
+                                    background: transparent
                                 }
                             }
                         }
@@ -84,7 +145,7 @@
                                 position: absolute;
                                 right: 10px;
                                 top: 10px;
-                                background: #FFFFFF;
+                                background: #F7F8FB;
                                 padding-left: 10px;
                                 i{
                                     font-size: 20px;
@@ -159,11 +220,100 @@
                                         color: #747883;
                                     }
                                 }
+                                .dropdown {
+                                    position: relative;
+                                    display: inline-block;
+                                    z-index: 3;
+                                    .dropbtn{
+                                        background: transparent;
+                                        border: none;
+                                        font-family: 'PT Root UI';
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        font-size: 18px;
+                                        line-height: 24px;
+                                        color: #15191C;
+                                        padding-bottom: 6px;
+                                        transition: all .5s ease;
+                                        border-bottom: 2px solid transparent;
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 10px;
+                                        cursor: pointer;
+                                        i{
+                                            font-size: 15px;
+                                            transition: all .5s ease;
+                                        }
+                                    }
+                                    .dropdown-content {
+                                        display: none;
+                                        position: absolute;
+                                        background-color: #f9f9f9;
+                                        min-width: 120px;
+                                        right: -10px;
+                                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                                        z-index: 1;
+                                        a {
+                                            font-family: 'PT Root UI';
+                                            font-style: normal;
+                                            font-weight: 500;
+                                            font-size: 18px;
+                                            line-height: 24px;
+                                            color: #15191C;
+                                            padding-bottom: 6px;
+                                            transition: all .5s ease;
+                                            border-bottom: 2px solid transparent;
+                                            padding: 12px 16px;
+                                            text-decoration: none;
+                                            display: block;
+                                        }
+                                        a:hover{
+                                            color: #0867D6;
+                                            border-bottom: 2px solid #0867D6;
+                                        }
+                                        a:nth-child(1){
+                                            display: none;
+                                        }
+                                        a:nth-child(2){
+                                            display: none;
+                                        }
+                                        a:nth-child(3){
+                                            display: none;
+                                        }
+                                        a:nth-child(4){
+                                            display: none;
+                                        }
+                                        a:nth-child(5){
+                                            display: none;
+                                        }
+                                         a:nth-child(6){
+                                            display: none;
+                                        }
+                                        a:nth-child(7){
+                                            display: none;
+                                        }
+                                        a:nth-child(8){
+                                            display: none;
+                                        }
+                                    }
+                                }
+                                .dropdown:hover .dropdown-content {
+                                    display: block;
+                                }
+                                .dropdown:hover .dropbtn {
+                                    i {
+                                        transform: rotate(180deg);
+                                    }
+                                }
+
                             }
                             .menu-item:hover{
                                 a{
                                     color: #0867D6;
                                     border-bottom: 2px solid #0867D6;
+                                }
+                                .dropdown a{
+                                    border-bottom: none;
                                 }
                             }
                         }
@@ -177,84 +327,247 @@
                 .container{
                     .container-wrap{
                         @include d-flex();
-                        gap: 16px;
-                        .header-carousel{
-                            margin-top: 40px;
-                            filter: drop-shadow(10px 10px 40px rgba(0, 0, 0, 0.2));
-                            border-radius: 20px;
-                            width: 540px;
-                            height: 340px;
-                            position: relative;
-                            text-align: center;
-                            border: 1px solid red;
-                            .content{
-                                width: 540px;
-                                height: 340px;
-                                overflow: hidden;
-                                border-radius: 20px;
-                                height: 100%;
+                        // justify-content: space-around;
+                        justify-content: center;
+                            gap: 16px;
+                        
+                            .home-swiper-wrap {
+                                position: relative;
+                            }
+                        
+                            .homeSwiper {
+                                border-radius: 10px;
                                 width: 100%;
-                                .images{
+                                height: 415px;
+                                margin: 0;
+                        
+                                .home-item {
                                     img {
-                                        width: 100%;
-                                        height: 100%;
-                                        
+                        
+                                        &:nth-child(2),
+                                        &:nth-child(3) {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                        
+                                .home-prev-btn,
+                                .home-next-btn {
+                                    position: absolute;
+                                    z-index: 1;
+                                    top: 50%;
+                                    font-size: 20px;
+                                    color: #535e69;
+                                    transform: translateY(-50%);
+                                    cursor: pointer;
+                                }
+                        
+                                .home-prev-btn {
+                                    width: 80px;
+                                    height: 80px;
+                                    border-radius: 50%;
+                                    margin-left: -30px;
+                                    backdrop-filter: blur(50px);
+                        
+                                    i {
+                                        @include d-flex();
+                                        width: 60px;
+                                        height: 60px;
+                                        background: #f8f9fa;
+                                        opacity: 0.8;
+                                        border-radius: 50%;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translateY(-50%);
+                                        margin-left: -30px;
+                                        padding: 21px 0 21px 28px;
+                                    }
+                                }
+                        
+                                .home-next-btn {
+                                    width: 80px;
+                                    height: 80px;
+                                    border-radius: 50%;
+                                    margin-right: -30px;
+                                    backdrop-filter: blur(50px);
+                                    right: 0;
+                        
+                                    i {
+                                        @include d-flex();
+                                        width: 60px;
+                                        height: 60px;
+                                        background: #f8f9fa;
+                                        opacity: 0.8;
+                                        border-radius: 50%;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translateY(-50%);
+                                        margin-left: -30px;
+                                        padding: 21px 0px 21px 17px;
+                                    }
+                                }
+                        
+                                .swiper-wrapper {
+                                    .home-item {
+                                        position: relative;
+                        
+                                        a {
+                                            position: absolute;
+                                            left: 50px;
+                                            bottom: 40px;
+                                            font-style: normal;
+                                            font-weight: 500;
+                                            font-size: 18px;
+                                            line-height: 24px;
+                                            display: flex;
+                                            align-items: center;
+                                            color: $black;
+                                            padding: 16px 30px;
+                                            background: $yellow;
+                                            border-radius: 3px;
+                                            transition: all 0.3s ease;
+                        
+                                            &:hover {
+                                                background: #e4ce08;
+                                            }
+                        
+                                            i {
+                                                margin-left: 15px;
+                                            }
+                                        }
+                        
+                                        img {
+                                            width: 100%;
+                                            height: 100%;
+                                        }
                                     }
                                 }
                             }
-                            .btn-sliders{
-                                width: 100%;
+                        
+                            .home-swiper-pagination {
+                                background: rgba(255, 255, 255, 0.3);
+                                border-radius: 5px;
+                                margin-top: -50px;
+                                z-index: 1;
                                 position: absolute;
-                                bottom: -12px;
-                                opacity: 0.5;
+                                width: 132px;
+                                height: 30px;
+                                @include d-flex();
+                                padding: 11px 15px;
                                 left: 50%;
-                                transform: translate(-50%);
-                                display: flex;
-                                justify-content: space-between;
-                                gap: 20px;
-                                span{
-                                    flex: 1;
-                                    width: 100% ;
-                                    height:4px;
-                                    display: inline-block;
-                                    background: #FFFFFF;
+                                transform: translateX(-50%);
+                                bottom: 10px;
+                            }
+                        
+                            .swiper-pagination-bullet {
+                                background: #d7d9dc;
+                                transform: scale(0.9);
+                                width: 8px;
+                                height: 8px;
+                            }
+                        
+                            .swiper-pagination-bullet-active {
+                                transform: scale(1);
+                                background: $white;
+                            }
+                        
+                            .homeSwiper2 {
+                                max-width: 277px;
+                                height: 415px;
+                                margin: 0;
+                                border-radius: 10px;
+                        
+                                .home-item2 {
+                                    img {
+                                        height: 100%;
+                                    }
+                                }
+                        
+                                .home2-prev-btn,
+                                .home2-next-btn {
+                                    position: absolute;
+                                    z-index: 1;
+                                    top: 50%;
+                                    font-size: 20px;
+                                    color: #535e69;
+                                    transform: translateY(-50%);
                                     cursor: pointer;
-                                    transition: all .5s ease;
-                                    border-radius: 30px;
                                 }
-                                span:hover{
-                                        background: #4361EE;
+                        
+                                .home2-prev-btn {
+                                    width: 80px;
+                                    height: 80px;
+                                    border-radius: 50%;
+                                    margin-left: -30px;
+                                    backdrop-filter: blur(50px);
+                        
+                                    i {
+                                        @include d-flex();
+                                        width: 60px;
+                                        height: 60px;
+                                        background: #f8f9fa;
+                                        opacity: 0.8;
+                                        border-radius: 50%;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translateY(-50%);
+                                        margin-left: -30px;
+                                        padding: 21px 0 21px 28px;
+                                    }
+                                }
+                        
+                                .home2-next-btn {
+                                    width: 80px;
+                                    height: 80px;
+                                    border-radius: 50%;
+                                    margin-right: -30px;
+                                    backdrop-filter: blur(50px);
+                                    right: 0;
+                        
+                                    i {
+                                        @include d-flex();
+                                        width: 60px;
+                                        height: 60px;
+                                        background: #f8f9fa;
+                                        opacity: 0.8;
+                                        border-radius: 50%;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translateY(-50%);
+                                        margin-left: -30px;
+                                        padding: 21px 0px 21px 17px;
+                                    }
+                                }
+                        
+                                .home2-swiper-pagination {
+                                    background: rgba(255, 255, 255, 0.3);
+                                    border-radius: 5px;
+                                    margin-top: -50px;
+                                    z-index: 1;
+                                    position: absolute;
+                                    width: 132px;
+                                    @include d-flex();
+                                    padding: 11px 15px;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                }
+                        
+                                .swiper-pagination-bullet {
+                                    background: #d7d9dc;
+                                    transform: scale(0.9);
+                                    width: 8px;
+                                    height: 8px;
+                                }
+                        
+                                .swiper-pagination-bullet-active {
+                                    transform: scale(1);
+                                    background: $white;
                                 }
                             }
-                            .slide{
-                            position: absolute;
-                            top: 50%;
-                            transform: translateY(-50%);
-                            width: 40px;
-                            height: 40px;
-                            background: white;
-                            cursor: pointer;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            border-radius: 50%;
-                            i{
-                                color: #AAAAAA;;
-                            }
-                            }
-                            .right{
-                                right: -18px;
-                            }
-                            .left{
-                                left: -18px;
-                            }
-                        }
-                        .carousel1{
-                            flex: 3;
-                        }
-                        .carousel2{
-                            flex: 1;
-                        }
                     }
                 }
         }
@@ -268,6 +581,38 @@
                            .nav-gmail{
                                 display: none;
                            }
+                        }
+                    }
+                }
+                .nav-menu{
+                    .container{
+                        .container-wrap{
+                            .menu-link{
+                                .menu-item:nth-child(7){
+                                    display: none;
+                                }
+                                .menu-item:nth-child(8){
+                                    display: none;
+                                }
+                                .menu-item:nth-child(9){
+                                    display: none;
+                                }
+                                .menu-item{
+                                    .dropdown{
+                                        .dropdown-content{
+                                             a:nth-child(6){
+                                                display: block;
+                                            }
+                                            a:nth-child(7){
+                                                display: block;
+                                            }
+                                            a:nth-child(8){
+                                                display: block;
+                                        }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -290,6 +635,19 @@
                                     }
                                     .nav-item:nth-child(5){
                                         display: none;
+                                    }
+                                    .dropdown{
+                                        .dropdown-content{
+                                            a:nth-child(3){
+                                                display: block;
+                                            }
+                                            a:nth-child(4){
+                                                display: block;
+                                            }
+                                            a:nth-child(5){
+                                                display: block;
+                                            }
+                                        }
                                     }
                                 }
                            }
@@ -330,6 +688,9 @@
                             }
                         }
                     }
+                }
+                .nav-menu{
+                    display: none;
                 }
             }
         }

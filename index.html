@@ -16,6 +16,9 @@
 
     <!-- style css -->
     <link rel="stylesheet" href="./style/main.css" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   </head>
   <body>
     <!-- header start -->
@@ -34,7 +37,24 @@
                                 <li class="nav-item"><a href="#0">Оплата</a></li>
                                 <li class="nav-item"><a href="#0">Акции</a></li>
                                 <li class="nav-item"><a href="#0">Распродажа</a></li>
-                                <li class="nav-item"><a href="#0">Еще<i class="fa-solid fa-chevron-down"></i></a></li>
+                                <li class="nav-item">
+                                    <div class="dropdown">
+                                      <button class="dropbtn">Еще<i class="fa-solid fa-chevron-down"></i></button>
+                                      <div class="dropdown-content">
+                                        <a href="#">О компании </a>
+                                        <a href="#0">Доставка </a>
+                                        <a href="#0">Оплата</a>
+                                        <a href="#0">Акции</a>
+                                        <a href="#0">Распродажа</a>
+                                        <a href="#0">Вакансии</a>
+                                        <a href="#0">Гарантии</a>
+                                        <a href="#0">Блог</a>
+                                        <a href="#0">Для юр. лиц</a>
+                                        <a href="#0">Отзывы</a>
+                                        <a href="#0">Контакты</a>
+                                      </div>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                         <div class="nav-message-icons">
@@ -43,7 +63,7 @@
                                 <a href="#0"><img src="./img/phone_icon.svg" alt="phone" loading="lazy"></a>
                                 <a href="#0"><img src="./img/whatsapp_icon.svg" alt="whatsapp" loading="lazy"></a>
                             </span>
-                            <a href="tel:74564895">+7 495 215 0744</a>
+                            <a href="tel:745648950">+7 495 215 0744</a>
                         </div>
                         <div class="nav-gmail">
                             <a href="#0"><i class="fa-regular fa-envelope"></i>sales@tele-optics.ru</a>
@@ -89,7 +109,22 @@
                             <li class="menu-item"><a href="#0">Прицелы</a></li>
                             <li class="menu-item"><a href="#0">Дальномеры</a></li>
                             <li class="menu-item"><a href="#0">Тепловизоры</a></li>
-                            <li class="menu-item"><a href="#0">Еще<i class="fa-solid fa-chevron-down"></i></a></li>
+                            <li class="menu-item">
+                                <div class="dropdown">
+                                  <button class="dropbtn">Еще<i class="fa-solid fa-chevron-down"></i></button>
+                                  <div class="dropdown-content">
+                                    <a href="#0">Телескопы</a>
+                                    <a href="#0">Бинокли</a>
+                                    <a href="#0">Лупы</a>
+                                    <a href="#0">Микроскопы</a>
+                                    <a href="#0">Зрительные трубы</a>
+                                    <a href="#0">Монокуляры</a>
+                                    <a href="#0">Дальномеры</a>
+                                    <a href="#0">Тепловизоры</a>
+                                    <a href="#">Дальномеры</a>
+                                  </div>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -98,54 +133,76 @@
         <div class="header-home">
             <div class="container">
                 <div class="container-wrap">
-                    <div class="header-carousel carousel1">
-                        <div class="content">
-                            <div class="images">
-                                <img src="./img/slider-img.png" alt="">
-                                <img src="./img/slider-img.png" alt="">
-                                <img src="./img/slider-img.png" alt="">
-                                <img src="./img/slider-img.png" alt="">
-                                <img src="./img/slider-img.png" alt="">
-                            </div>
+                    <div class="swiper homeSwiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide home-item">
+                          <img src="images/home-1-1.png" alt="image" loading="lazy">
+                          <a href="#0">
+                            Подробнее
+                            <i class="fa fa-arrow-right"></i>
+                          </a>
                         </div>
-                        <div onclick="side_slide(-1)" class="slide left">
-                            <i class="fa-solid fa-chevron-left"></i>
+                        <div class="swiper-slide home-item">
+                          <img src="images/home-1-1.png" alt="image" loading="lazy">
+                          <a href="#0">
+                            Подробнее
+                            <i class="fa fa-arrow-right"></i>
+                          </a>
                         </div>
-                        <div onclick="side_slide(1)" class="slide right">
-                            <i class="fa-solid fa-chevron-right"></i>
+                        <div class="swiper-slide home-item">
+                          <img src="images/home-1-1.png" alt="image" loading="lazy">
+                          <a href="#0">
+                            Подробнее
+                            <i class="fa fa-arrow-right"></i>
+                          </a>
                         </div>
-                        <div class="btn-sliders">
-                            <span onclick="btn_slide(1)"></span>
-                            <span onclick="btn_slide(2)"></span>
-                            <span onclick="btn_slide(3)"></span>
-                            <span onclick="btn_slide(4)"></span>
+                        <div class="swiper-slide home-item">
+                          <img src="images/home-1-1.png" alt="image" loading="lazy">
+                          <a href="#0">
+                            Подробнее
+                            <i class="fa fa-arrow-right"></i>
+                          </a>
                         </div>
+                        <div class="swiper-slide home-item">
+                          <img src="images/home-1-1.png" alt="image" loading="lazy">
+                          <a href="#0">
+                            Подробнее
+                            <i class="fa fa-arrow-right"></i>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="home-prev-btn">
+                        <i class="fa fa-angle-left"></i>
+                      </div>
+                      <div class="home-next-btn">
+                        <i class="fa fa-angle-right"></i>
+                      </div>
+                      <div class="hmsp home-swiper-pagination"></div>
                     </div>
-                    <div class="header-carousel carousel2">
-                        <div class="content">
-                            <div class="images">
-                                
-                            </div>
+                    <div class="home-swiper-pagination"></div>
+                    <div class="swiper homeSwiper2">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide home-item2">
+                          <img src="images/home-2.png" alt="img">
                         </div>
-                        <div onclick="side_slide(-1)" class="slide left">
-                            <i class="fa-solid fa-chevron-left"></i>
+                        <div class="swiper-slide home-item2">
+                          <img src="images/home-2.png" alt="img">
                         </div>
-                        <div onclick="side_slide(1)" class="slide right">
-                            <i class="fa-solid fa-chevron-right"></i>
+                        <div class="swiper-slide home-item2">
+                          <img src="images/home-2.png" alt="img">
                         </div>
-                        <div class="btn-sliders">
-                            <span onclick="btn_slide(1)"></span>
-                            <span onclick="btn_slide(2)"></span>
-                            <span onclick="btn_slide(3)"></span>
-                            <span onclick="btn_slide(4)"></span>
-                        </div>
+                      </div>
+                      <div class="home2-prev-btn">
+                        <i class="fa fa-angle-left"></i>
+                      </div>
+                      <div class="home2-next-btn">
+                        <i class="fa fa-angle-right"></i>
+                      </div>
+                      <div class="home2-swiper-pagination"></div>
                     </div>
                 </div>
             </div>
         </div>
-      <div class="container">
-        <div class="container-wrap"></div>
-      </div>
     </header>
     <!-- header end -->
 
@@ -259,16 +316,1123 @@
 
     <!-- Bestsellers start -->
     <section id="bestsellers">
-      <div class="container">
-        <div class="container-wrap"></div>
-      </div>
+        <div class="container">
+            <div class="container-wrap">
+
+                <!-- content boshlandi -->
+
+                <div class="flex">
+                    <h1>Хиты продаж</h1>
+                    <button>
+                        <span>Смотреть весь каталог</span>
+                        <div>
+                          <img src="./images/Path.svg" alt="img">
+                        </div>
+                    </button>
+                </div>
+
+                <!-- slider boshlandi  -->
+
+                <div class="slider">
+                    <div class="slider_in">
+                        <div class="item">
+
+                            <!-- item flex text  -->
+
+                            <div class="flex_in">
+                                <div>
+                                    <img src="./images/check.svg" alt="img">
+                                </div>
+                                <span>В наличии</span>
+                            </div>
+
+                            <!-- mini slider boshlandi  -->
+
+                            <div class="mini_slider">
+
+                                <div class="mini_item">
+                                    <img src="./images/image 198.png" alt="img">
+                                    <img src="./images/image 199.png" alt="img">
+                                    <img src="./images/image 200.png" alt="img">
+                                    <img src="./images/image 201.png" alt="img">
+                                </div>
+
+                                <div class="mini_slider_box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                            </div>
+                            <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                            <div class="flex_star">
+                                <div class="star">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star.svg" alt="img">
+                                </div>
+                                <p>4.67</p>
+                                <span>(12 отзывов)</span>
+                            </div>
+                            <a href="#4" class="flex_batton">
+                                <div>
+                                    <p>10 190 ₽</p>
+                                    <span>12 450 ₽</span>
+                                </div>
+                                <div>
+                                    <img src="./images/Icon.svg" alt="img">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+
+                            <!-- item flex text  -->
+
+                            <div class="flex_in">
+                                <div>
+                                    <img src="./images/check.svg" alt="img">
+                                </div>
+                                <span>В наличии</span>
+                            </div>
+
+                            <!-- mini slider boshlandi  -->
+
+                            <div class="mini_slider">
+
+                                <div class="mini_item">
+                                    <img src="./images/image 198.png" alt="img">
+                                    <img src="./images/image 199.png" alt="img">
+                                    <img src="./images/image 200.png" alt="img">
+                                    <img src="./images/image 201.png" alt="img">
+                                </div>
+
+                                <div class="mini_slider_box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                            </div>
+                            <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                            <div class="flex_star">
+                                <div class="star">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star.svg" alt="img">
+                                </div>
+                                <p>4.67</p>
+                                <span>(12 отзывов)</span>
+                            </div>
+                            <a href="#4" class="flex_batton">
+                                <div>
+                                    <p>10 190 ₽</p>
+                                    <span>12 450 ₽</span>
+                                </div>
+                                <div>
+                                    <img src="./images/Icon.svg" alt="img">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+
+                            <!-- item flex text  -->
+
+                            <div class="flex_in">
+                                <div>
+                                    <img src="./images/check.svg" alt="img">
+                                </div>
+                                <span>В наличии</span>
+                            </div>
+
+                            <!-- mini slider boshlandi  -->
+
+                            <div class="mini_slider">
+
+                                <div class="mini_item">
+                                    <img src="./images/image 198.png" alt="img">
+                                    <img src="./images/image 199.png" alt="img">
+                                    <img src="./images/image 200.png" alt="img">
+                                    <img src="./images/image 201.png" alt="img">
+                                </div>
+
+                                <div class="mini_slider_box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                            </div>
+                            <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                            <div class="flex_star">
+                                <div class="star">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star.svg" alt="img">
+                                </div>
+                                <p>4.67</p>
+                                <span>(12 отзывов)</span>
+                            </div>
+                            <a href="#4" class="flex_batton">
+                                <div>
+                                    <p>10 190 ₽</p>
+                                    <span>12 450 ₽</span>
+                                </div>
+                                <div>
+                                    <img src="./images/Icon.svg" alt="img">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+
+                            <!-- item flex text  -->
+
+                            <div class="flex_in">
+                                <div>
+                                    <img src="./images/check.svg" alt="img">
+                                </div>
+                                <span>В наличии</span>
+                            </div>
+
+                            <!-- mini slider boshlandi  -->
+
+                            <div class="mini_slider">
+
+                                <div class="mini_item">
+                                    <img src="./images/image 198.png" alt="img">
+                                    <img src="./images/image 199.png" alt="img">
+                                    <img src="./images/image 200.png" alt="img">
+                                    <img src="./images/image 201.png" alt="img">
+                                </div>
+
+                                <div class="mini_slider_box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                            </div>
+                            <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                            <div class="flex_star">
+                                <div class="star">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star.svg" alt="img">
+                                </div>
+                                <p>4.67</p>
+                                <span>(12 отзывов)</span>
+                            </div>
+                            <a href="#4" class="flex_batton">
+                                <div>
+                                    <p>10 190 ₽</p>
+                                    <span>12 450 ₽</span>
+                                </div>
+                                <div>
+                                    <img src="./images/Icon.svg" alt="img">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+
+                            <!-- item flex text  -->
+
+                            <div class="flex_in">
+                                <div>
+                                    <img src="./images/check.svg" alt="img">
+                                </div>
+                                <span>В наличии</span>
+                            </div>
+
+                            <!-- mini slider boshlandi  -->
+
+                            <div class="mini_slider">
+
+                                <div class="mini_item">
+                                    <img src="./images/image 198.png" alt="img">
+                                    <img src="./images/image 199.png" alt="img">
+                                    <img src="./images/image 200.png" alt="img">
+                                    <img src="./images/image 201.png" alt="img">
+                                </div>
+
+                                <div class="mini_slider_box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                            </div>
+                            <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                            <div class="flex_star">
+                                <div class="star">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star.svg" alt="img">
+                                </div>
+                                <p>4.67</p>
+                                <span>(12 отзывов)</span>
+                            </div>
+                            <a href="#4" class="flex_batton">
+                                <div>
+                                    <p>10 190 ₽</p>
+                                    <span>12 450 ₽</span>
+                                </div>
+                                <div>
+                                    <img src="./images/Icon.svg" alt="img">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+
+                            <!-- item flex text  -->
+
+                            <div class="flex_in">
+                                <div>
+                                    <img src="./images/check.svg" alt="img">
+                                </div>
+                                <span>В наличии</span>
+                            </div>
+
+                            <!-- mini slider boshlandi  -->
+
+                            <div class="mini_slider">
+
+                                <div class="mini_item">
+                                    <img src="./images/image 198.png" alt="img">
+                                    <img src="./images/image 199.png" alt="img">
+                                    <img src="./images/image 200.png" alt="img">
+                                    <img src="./images/image 201.png" alt="img">
+                                </div>
+
+                                <div class="mini_slider_box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                            </div>
+                            <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                            <div class="flex_star">
+                                <div class="star">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star.svg" alt="img">
+                                </div>
+                                <p>4.67</p>
+                                <span>(12 отзывов)</span>
+                            </div>
+                            <a href="#4" class="flex_batton">
+                                <div>
+                                    <p>10 190 ₽</p>
+                                    <span>12 450 ₽</span>
+                                </div>
+                                <div>
+                                    <img src="./images/Icon.svg" alt="img">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+
+                            <!-- item flex text  -->
+
+                            <div class="flex_in">
+                                <div>
+                                    <img src="./images/check.svg" alt="img">
+                                </div>
+                                <span>В наличии</span>
+                            </div>
+
+                            <!-- mini slider boshlandi  -->
+
+                            <div class="mini_slider">
+
+                                <div class="mini_item">
+                                    <img src="./images/image 198.png" alt="img">
+                                    <img src="./images/image 199.png" alt="img">
+                                    <img src="./images/image 200.png" alt="img">
+                                    <img src="./images/image 201.png" alt="img">
+                                </div>
+
+                                <div class="mini_slider_box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                            </div>
+                            <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                            <div class="flex_star">
+                                <div class="star">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star.svg" alt="img">
+                                </div>
+                                <p>4.67</p>
+                                <span>(12 отзывов)</span>
+                            </div>
+                            <a href="#4" class="flex_batton">
+                                <div>
+                                    <p>10 190 ₽</p>
+                                    <span>12 450 ₽</span>
+                                </div>
+                                <div>
+                                    <img src="./images/Icon.svg" alt="img">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+
+                            <!-- item flex text  -->
+
+                            <div class="flex_in">
+                                <div>
+                                    <img src="./images/check.svg" alt="img">
+                                </div>
+                                <span>В наличии</span>
+                            </div>
+
+                            <!-- mini slider boshlandi  -->
+
+                            <div class="mini_slider">
+
+                                <div class="mini_item">
+                                    <img src="./images/image 198.png" alt="img">
+                                    <img src="./images/image 199.png" alt="img">
+                                    <img src="./images/image 200.png" alt="img">
+                                    <img src="./images/image 201.png" alt="img">
+                                </div>
+
+                                <div class="mini_slider_box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                            </div>
+                            <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                            <div class="flex_star">
+                                <div class="star">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star.svg" alt="img">
+                                </div>
+                                <p>4.67</p>
+                                <span>(12 отзывов)</span>
+                            </div>
+                            <a href="#4" class="flex_batton">
+                                <div>
+                                    <p>10 190 ₽</p>
+                                    <span>12 450 ₽</span>
+                                </div>
+                                <div>
+                                    <img src="./images/Icon.svg" alt="img">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+
+                            <!-- item flex text  -->
+
+                            <div class="flex_in">
+                                <div>
+                                    <img src="./images/check.svg" alt="img">
+                                </div>
+                                <span>В наличии</span>
+                            </div>
+
+                            <!-- mini slider boshlandi  -->
+
+                            <div class="mini_slider">
+
+                                <div class="mini_item">
+                                    <img src="./images/image 198.png" alt="img">
+                                    <img src="./images/image 199.png" alt="img">
+                                    <img src="./images/image 200.png" alt="img">
+                                    <img src="./images/image 201.png" alt="img">
+                                </div>
+
+                                <div class="mini_slider_box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                            </div>
+                            <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                            <div class="flex_star">
+                                <div class="star">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star.svg" alt="img">
+                                </div>
+                                <p>4.67</p>
+                                <span>(12 отзывов)</span>
+                            </div>
+                            <a href="#4" class="flex_batton">
+                                <div>
+                                    <p>10 190 ₽</p>
+                                    <span>12 450 ₽</span>
+                                </div>
+                                <div>
+                                    <img src="./images/Icon.svg" alt="img">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+
+                            <!-- item flex text  -->
+
+                            <div class="flex_in">
+                                <div>
+                                    <img src="./images/check.svg" alt="img">
+                                </div>
+                                <span>В наличии</span>
+                            </div>
+
+                            <!-- mini slider boshlandi  -->
+
+                            <div class="mini_slider">
+
+                                <div class="mini_item">
+                                    <img src="./images/image 198.png" alt="img">
+                                    <img src="./images/image 199.png" alt="img">
+                                    <img src="./images/image 200.png" alt="img">
+                                    <img src="./images/image 201.png" alt="img">
+                                </div>
+
+                                <div class="mini_slider_box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                            </div>
+                            <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                            <div class="flex_star">
+                                <div class="star">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star.svg" alt="img">
+                                </div>
+                                <p>4.67</p>
+                                <span>(12 отзывов)</span>
+                            </div>
+                            <a href="#4" class="flex_batton">
+                                <div>
+                                    <p>10 190 ₽</p>
+                                    <span>12 450 ₽</span>
+                                </div>
+                                <div>
+                                    <img src="./images/Icon.svg" alt="img">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+
+                            <!-- item flex text  -->
+
+                            <div class="flex_in">
+                                <div>
+                                    <img src="./images/check.svg" alt="img">
+                                </div>
+                                <span>В наличии</span>
+                            </div>
+
+                            <!-- mini slider boshlandi  -->
+
+                            <div class="mini_slider">
+
+                                <div class="mini_item">
+                                    <img src="./images/image 198.png" alt="img">
+                                    <img src="./images/image 199.png" alt="img">
+                                    <img src="./images/image 200.png" alt="img">
+                                    <img src="./images/image 201.png" alt="img">
+                                </div>
+
+                                <div class="mini_slider_box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                            </div>
+                            <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                            <div class="flex_star">
+                                <div class="star">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star.svg" alt="img">
+                                </div>
+                                <p>4.67</p>
+                                <span>(12 отзывов)</span>
+                            </div>
+                            <a href="#4" class="flex_batton">
+                                <div>
+                                    <p>10 190 ₽</p>
+                                    <span>12 450 ₽</span>
+                                </div>
+                                <div>
+                                    <img src="./images/Icon.svg" alt="img">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+
+                            <!-- item flex text  -->
+
+                            <div class="flex_in">
+                                <div>
+                                    <img src="./images/check.svg" alt="img">
+                                </div>
+                                <span>В наличии</span>
+                            </div>
+
+                            <!-- mini slider boshlandi  -->
+
+                            <div class="mini_slider">
+
+                                <div class="mini_item">
+                                    <img src="./images/image 198.png" alt="img">
+                                    <img src="./images/image 199.png" alt="img">
+                                    <img src="./images/image 200.png" alt="img">
+                                    <img src="./images/image 201.png" alt="img">
+                                </div>
+
+                                <div class="mini_slider_box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                            </div>
+                            <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                            <div class="flex_star">
+                                <div class="star">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star.svg" alt="img">
+                                </div>
+                                <p>4.67</p>
+                                <span>(12 отзывов)</span>
+                            </div>
+                            <a href="#4" class="flex_batton">
+                                <div>
+                                    <p>10 190 ₽</p>
+                                    <span>12 450 ₽</span>
+                                </div>
+                                <div>
+                                    <img src="./images/Icon.svg" alt="img">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+
+                            <!-- item flex text  -->
+
+                            <div class="flex_in">
+                                <div>
+                                    <img src="./images/check.svg" alt="img">
+                                </div>
+                                <span>В наличии</span>
+                            </div>
+
+                            <!-- mini slider boshlandi  -->
+
+                            <div class="mini_slider">
+
+                                <div class="mini_item">
+                                    <img src="./images/image 198.png" alt="img">
+                                    <img src="./images/image 199.png" alt="img">
+                                    <img src="./images/image 200.png" alt="img">
+                                    <img src="./images/image 201.png" alt="img">
+                                </div>
+
+                                <div class="mini_slider_box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                            </div>
+                            <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                            <div class="flex_star">
+                                <div class="star">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star.svg" alt="img">
+                                </div>
+                                <p>4.67</p>
+                                <span>(12 отзывов)</span>
+                            </div>
+                            <a href="#4" class="flex_batton">
+                                <div>
+                                    <p>10 190 ₽</p>
+                                    <span>12 450 ₽</span>
+                                </div>
+                                <div>
+                                    <img src="./images/Icon.svg" alt="img">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+
+                            <!-- item flex text  -->
+
+                            <div class="flex_in">
+                                <div>
+                                    <img src="./images/check.svg" alt="img">
+                                </div>
+                                <span>В наличии</span>
+                            </div>
+
+                            <!-- mini slider boshlandi  -->
+
+                            <div class="mini_slider">
+
+                                <div class="mini_item">
+                                    <img src="./images/image 198.png" alt="img">
+                                    <img src="./images/image 199.png" alt="img">
+                                    <img src="./images/image 200.png" alt="img">
+                                    <img src="./images/image 201.png" alt="img">
+                                </div>
+
+                                <div class="mini_slider_box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                            </div>
+                            <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                            <div class="flex_star">
+                                <div class="star">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star.svg" alt="img">
+                                </div>
+                                <p>4.67</p>
+                                <span>(12 отзывов)</span>
+                            </div>
+                            <a href="#4" class="flex_batton">
+                                <div>
+                                    <p>10 190 ₽</p>
+                                    <span>12 450 ₽</span>
+                                </div>
+                                <div>
+                                    <img src="./images/Icon.svg" alt="img">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+
+                            <!-- item flex text  -->
+
+                            <div class="flex_in">
+                                <div>
+                                    <img src="./images/check.svg" alt="img">
+                                </div>
+                                <span>В наличии</span>
+                            </div>
+
+                            <!-- mini slider boshlandi  -->
+
+                            <div class="mini_slider">
+
+                                <div class="mini_item">
+                                    <img src="./images/image 198.png" alt="img">
+                                    <img src="./images/image 199.png" alt="img">
+                                    <img src="./images/image 200.png" alt="img">
+                                    <img src="./images/image 201.png" alt="img">
+                                </div>
+
+                                <div class="mini_slider_box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                            </div>
+                            <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                            <div class="flex_star">
+                                <div class="star">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star.svg" alt="img">
+                                </div>
+                                <p>4.67</p>
+                                <span>(12 отзывов)</span>
+                            </div>
+                            <a href="#4" class="flex_batton">
+                                <div>
+                                    <p>10 190 ₽</p>
+                                    <span>12 450 ₽</span>
+                                </div>
+                                <div>
+                                    <img src="./images/Icon.svg" alt="img">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+
+                            <!-- item flex text  -->
+
+                            <div class="flex_in">
+                                <div>
+                                    <img src="./images/check.svg" alt="img">
+                                </div>
+                                <span>В наличии</span>
+                            </div>
+
+                            <!-- mini slider boshlandi  -->
+
+                            <div class="mini_slider">
+
+                                <div class="mini_item">
+                                    <img src="./images/image 198.png" alt="img">
+                                    <img src="./images/image 199.png" alt="img">
+                                    <img src="./images/image 200.png" alt="img">
+                                    <img src="./images/image 201.png" alt="img">
+                                </div>
+
+                                <div class="mini_slider_box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                            </div>
+                            <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                            <div class="flex_star">
+                                <div class="star">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star.svg" alt="img">
+                                </div>
+                                <p>4.67</p>
+                                <span>(12 отзывов)</span>
+                            </div>
+                            <a href="#4" class="flex_batton">
+                                <div>
+                                    <p>10 190 ₽</p>
+                                    <span>12 450 ₽</span>
+                                </div>
+                                <div>
+                                    <img src="./images/Icon.svg" alt="img">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+
+                            <!-- item flex text  -->
+
+                            <div class="flex_in">
+                                <div>
+                                    <img src="./images/check.svg" alt="img">
+                                </div>
+                                <span>В наличии</span>
+                            </div>
+
+                            <!-- mini slider boshlandi  -->
+
+                            <div class="mini_slider">
+
+                                <div class="mini_item">
+                                    <img src="./images/image 198.png" alt="img">
+                                    <img src="./images/image 199.png" alt="img">
+                                    <img src="./images/image 200.png" alt="img">
+                                    <img src="./images/image 201.png" alt="img">
+                                </div>
+
+                                <div class="mini_slider_box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                            </div>
+                            <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                            <div class="flex_star">
+                                <div class="star">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star.svg" alt="img">
+                                </div>
+                                <p>4.67</p>
+                                <span>(12 отзывов)</span>
+                            </div>
+                            <a href="#4" class="flex_batton">
+                                <div>
+                                    <p>10 190 ₽</p>
+                                    <span>12 450 ₽</span>
+                                </div>
+                                <div>
+                                    <img src="./images/Icon.svg" alt="img">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+
+                            <!-- item flex text  -->
+
+                            <div class="flex_in">
+                                <div>
+                                    <img src="./images/check.svg" alt="img">
+                                </div>
+                                <span>В наличии</span>
+                            </div>
+
+                            <!-- mini slider boshlandi  -->
+
+                            <div class="mini_slider">
+
+                                <div class="mini_item">
+                                    <img src="./images/image 198.png" alt="img">
+                                    <img src="./images/image 199.png" alt="img">
+                                    <img src="./images/image 200.png" alt="img">
+                                    <img src="./images/image 201.png" alt="img">
+                                </div>
+
+                                <div class="mini_slider_box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                            </div>
+                            <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                            <div class="flex_star">
+                                <div class="star">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star.svg" alt="img">
+                                </div>
+                                <p>4.67</p>
+                                <span>(12 отзывов)</span>
+                            </div>
+                            <a href="#4" class="flex_batton">
+                                <div>
+                                    <p>10 190 ₽</p>
+                                    <span>12 450 ₽</span>
+                                </div>
+                                <div>
+                                    <img src="./images/Icon.svg" alt="img">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+
+                            <!-- item flex text  -->
+
+                            <div class="flex_in">
+                                <div>
+                                    <img src="./images/check.svg" alt="img">
+                                </div>
+                                <span>В наличии</span>
+                            </div>
+
+                            <!-- mini slider boshlandi  -->
+
+                            <div class="mini_slider">
+
+                                <div class="mini_item">
+                                    <img src="./images/image 198.png" alt="img">
+                                    <img src="./images/image 199.png" alt="img">
+                                    <img src="./images/image 200.png" alt="img">
+                                    <img src="./images/image 201.png" alt="img">
+                                </div>
+
+                                <div class="mini_slider_box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                            </div>
+                            <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                            <div class="flex_star">
+                                <div class="star">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star.svg" alt="img">
+                                </div>
+                                <p>4.67</p>
+                                <span>(12 отзывов)</span>
+                            </div>
+                            <a href="#4" class="flex_batton">
+                                <div>
+                                    <p>10 190 ₽</p>
+                                    <span>12 450 ₽</span>
+                                </div>
+                                <div>
+                                    <img src="./images/Icon.svg" alt="img">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+
+                            <!-- item flex text  -->
+
+                            <div class="flex_in">
+                                <div>
+                                    <img src="./images/check.svg" alt="img">
+                                </div>
+                                <span>В наличии</span>
+                            </div>
+
+                            <!-- mini slider boshlandi  -->
+
+                            <div class="mini_slider">
+
+                                <div class="mini_item">
+                                    <img src="./images/image 198.png" alt="img">
+                                    <img src="./images/image 199.png" alt="img">
+                                    <img src="./images/image 200.png" alt="img">
+                                    <img src="./images/image 201.png" alt="img">
+                                </div>
+
+                                <div class="mini_slider_box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                            </div>
+                            <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                            <div class="flex_star">
+                                <div class="star">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star_filled.svg" alt="img">
+                                    <img src="./images/Star.svg" alt="img">
+                                </div>
+                                <p>4.67</p>
+                                <span>(12 отзывов)</span>
+                            </div>
+                            <a href="#4" class="flex_batton">
+                                <div>
+                                    <p>10 190 ₽</p>
+                                    <span>12 450 ₽</span>
+                                </div>
+                                <div>
+                                    <img src="./images/Icon.svg" alt="img">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- slider spans  -->
+
+                    <div class="slider_box">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        
+                    </div>
+
+                    <button class="left">
+                      <img src="./images/Path.svg" alt="img">
+                    </button>
+
+                    <button class="right">
+                      <img src="./images/Path.svg" alt="img">
+                    </button>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- Bestsellers end -->
 
     <!-- Brands start -->
     <section id="brands">
       <div class="container">
-        <div class="container-wrap"></div>
+        <div class="container-wrap">
+           <div class="flex">
+             <h1>Бренды</h1>
+             <a href="#4">
+              <span>Все бренды</span>
+              <div>
+                <img src="./images/Path.svg" alt="img">
+              </div>
+             </a>
+           </div>
+           <div class="corusel">
+            <a href="#4" class="item" style="--j:1" >
+              <img src="./images/image 190.jpg" alt="img">
+            </a>
+            <a href="#4" class="item" style="--j:2" >
+              <img src="./images/image 195.jpg" alt="img">
+            </a>
+            <a href="#4" class="item" style="--j:3" >
+              <img src="./images/image 192.jpg" alt="img">
+            </a>
+            <a href="#4" class="item" style="--j:4" >
+              <img src="./images/image 194.jpg" alt="img">
+            </a>
+            <a href="#4" class="item" style="--j:5" >
+              <img src="./images/image 196.jpg" alt="img">
+            </a>
+           </div>
+        </div>
       </div>
     </section>
     <!-- Brands end -->
@@ -276,7 +1440,1100 @@
     <!-- product start -->
     <section id="product">
       <div class="container">
-        <div class="container-wrap"></div>
+        <div class="container-wrap">
+          
+                <!-- content boshlandi -->
+
+                <div class="flex">
+                  <ul>
+                    <li class="active">
+                      <a href="#7">Рекомендуемые</a>
+                    </li>
+                    <li>
+                      <a href="#7">Новинки</a>
+                    </li>
+                    <li>
+                      <a href="#7">Самые просматриваемые</a>
+                    </li>
+                    <li>
+                      <a href="#7">Скидки</a>
+                    </li>
+                  </ul>
+                  <button>
+                      <span>Смотреть весь каталог</span>
+                      <div>
+                        <img src="./images/Path(2).svg" alt="img">
+                      </div>
+                  </button>
+              </div>
+
+              <!-- slider boshlandi  -->
+
+              <div class="slider">
+                  <div class="slider_in">
+                      <div class="item">
+
+                          <!-- item flex text  -->
+
+                          <div class="flex_in">
+                              <div>
+                                  <img src="./images/check.svg" alt="img">
+                              </div>
+                              <span>В наличии</span>
+                          </div>
+
+                          <!-- mini slider boshlandi  -->
+
+                          <div class="mini_slider">
+
+                              <div class="mini_item">
+                                  <img src="./images/image 198.png" alt="img">
+                                  <img src="./images/image 199.png" alt="img">
+                                  <img src="./images/image 200.png" alt="img">
+                                  <img src="./images/image 201.png" alt="img">
+                              </div>
+
+                              <div class="mini_slider_box">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                              </div>
+
+                          </div>
+                          <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                          <div class="flex_star">
+                              <div class="star">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star.svg" alt="img">
+                              </div>
+                              <p>4.67</p>
+                              <span>(12 отзывов)</span>
+                          </div>
+                          <a href="#4" class="flex_batton">
+                              <div>
+                                  <p>10 190 ₽</p>
+                                  <span>12 450 ₽</span>
+                              </div>
+                              <div>
+                                  <img src="./images/Icon.svg" alt="img">
+                              </div>
+                          </a>
+                      </div>
+                      <div class="item">
+
+                          <!-- item flex text  -->
+
+                          <div class="flex_in">
+                              <div>
+                                  <img src="./images/check.svg" alt="img">
+                              </div>
+                              <span>В наличии</span>
+                          </div>
+
+                          <!-- mini slider boshlandi  -->
+
+                          <div class="mini_slider">
+
+                              <div class="mini_item">
+                                  <img src="./images/image 198.png" alt="img">
+                                  <img src="./images/image 199.png" alt="img">
+                                  <img src="./images/image 200.png" alt="img">
+                                  <img src="./images/image 201.png" alt="img">
+                              </div>
+
+                              <div class="mini_slider_box">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                              </div>
+
+                          </div>
+                          <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                          <div class="flex_star">
+                              <div class="star">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star.svg" alt="img">
+                              </div>
+                              <p>4.67</p>
+                              <span>(12 отзывов)</span>
+                          </div>
+                          <a href="#4" class="flex_batton">
+                              <div>
+                                  <p>10 190 ₽</p>
+                                  <span>12 450 ₽</span>
+                              </div>
+                              <div>
+                                  <img src="./images/Icon.svg" alt="img">
+                              </div>
+                          </a>
+                      </div>
+                      <div class="item">
+
+                          <!-- item flex text  -->
+
+                          <div class="flex_in">
+                              <div>
+                                  <img src="./images/check.svg" alt="img">
+                              </div>
+                              <span>В наличии</span>
+                          </div>
+
+                          <!-- mini slider boshlandi  -->
+
+                          <div class="mini_slider">
+
+                              <div class="mini_item">
+                                  <img src="./images/image 198.png" alt="img">
+                                  <img src="./images/image 199.png" alt="img">
+                                  <img src="./images/image 200.png" alt="img">
+                                  <img src="./images/image 201.png" alt="img">
+                              </div>
+
+                              <div class="mini_slider_box">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                              </div>
+
+                          </div>
+                          <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                          <div class="flex_star">
+                              <div class="star">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star.svg" alt="img">
+                              </div>
+                              <p>4.67</p>
+                              <span>(12 отзывов)</span>
+                          </div>
+                          <a href="#4" class="flex_batton">
+                              <div>
+                                  <p>10 190 ₽</p>
+                                  <span>12 450 ₽</span>
+                              </div>
+                              <div>
+                                  <img src="./images/Icon.svg" alt="img">
+                              </div>
+                          </a>
+                      </div>
+                      <div class="item">
+
+                          <!-- item flex text  -->
+
+                          <div class="flex_in">
+                              <div>
+                                  <img src="./images/check.svg" alt="img">
+                              </div>
+                              <span>В наличии</span>
+                          </div>
+
+                          <!-- mini slider boshlandi  -->
+
+                          <div class="mini_slider">
+
+                              <div class="mini_item">
+                                  <img src="./images/image 198.png" alt="img">
+                                  <img src="./images/image 199.png" alt="img">
+                                  <img src="./images/image 200.png" alt="img">
+                                  <img src="./images/image 201.png" alt="img">
+                              </div>
+
+                              <div class="mini_slider_box">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                              </div>
+
+                          </div>
+                          <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                          <div class="flex_star">
+                              <div class="star">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star.svg" alt="img">
+                              </div>
+                              <p>4.67</p>
+                              <span>(12 отзывов)</span>
+                          </div>
+                          <a href="#4" class="flex_batton">
+                              <div>
+                                  <p>10 190 ₽</p>
+                                  <span>12 450 ₽</span>
+                              </div>
+                              <div>
+                                  <img src="./images/Icon.svg" alt="img">
+                              </div>
+                          </a>
+                      </div>
+                      <div class="item">
+
+                          <!-- item flex text  -->
+
+                          <div class="flex_in">
+                              <div>
+                                  <img src="./images/check.svg" alt="img">
+                              </div>
+                              <span>В наличии</span>
+                          </div>
+
+                          <!-- mini slider boshlandi  -->
+
+                          <div class="mini_slider">
+
+                              <div class="mini_item">
+                                  <img src="./images/image 198.png" alt="img">
+                                  <img src="./images/image 199.png" alt="img">
+                                  <img src="./images/image 200.png" alt="img">
+                                  <img src="./images/image 201.png" alt="img">
+                              </div>
+
+                              <div class="mini_slider_box">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                              </div>
+
+                          </div>
+                          <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                          <div class="flex_star">
+                              <div class="star">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star.svg" alt="img">
+                              </div>
+                              <p>4.67</p>
+                              <span>(12 отзывов)</span>
+                          </div>
+                          <a href="#4" class="flex_batton">
+                              <div>
+                                  <p>10 190 ₽</p>
+                                  <span>12 450 ₽</span>
+                              </div>
+                              <div>
+                                  <img src="./images/Icon.svg" alt="img">
+                              </div>
+                          </a>
+                      </div>
+                      <div class="item">
+
+                          <!-- item flex text  -->
+
+                          <div class="flex_in">
+                              <div>
+                                  <img src="./images/check.svg" alt="img">
+                              </div>
+                              <span>В наличии</span>
+                          </div>
+
+                          <!-- mini slider boshlandi  -->
+
+                          <div class="mini_slider">
+
+                              <div class="mini_item">
+                                  <img src="./images/image 198.png" alt="img">
+                                  <img src="./images/image 199.png" alt="img">
+                                  <img src="./images/image 200.png" alt="img">
+                                  <img src="./images/image 201.png" alt="img">
+                              </div>
+
+                              <div class="mini_slider_box">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                              </div>
+
+                          </div>
+                          <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                          <div class="flex_star">
+                              <div class="star">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star.svg" alt="img">
+                              </div>
+                              <p>4.67</p>
+                              <span>(12 отзывов)</span>
+                          </div>
+                          <a href="#4" class="flex_batton">
+                              <div>
+                                  <p>10 190 ₽</p>
+                                  <span>12 450 ₽</span>
+                              </div>
+                              <div>
+                                  <img src="./images/Icon.svg" alt="img">
+                              </div>
+                          </a>
+                      </div>
+                      <div class="item">
+
+                          <!-- item flex text  -->
+
+                          <div class="flex_in">
+                              <div>
+                                  <img src="./images/check.svg" alt="img">
+                              </div>
+                              <span>В наличии</span>
+                          </div>
+
+                          <!-- mini slider boshlandi  -->
+
+                          <div class="mini_slider">
+
+                              <div class="mini_item">
+                                  <img src="./images/image 198.png" alt="img">
+                                  <img src="./images/image 199.png" alt="img">
+                                  <img src="./images/image 200.png" alt="img">
+                                  <img src="./images/image 201.png" alt="img">
+                              </div>
+
+                              <div class="mini_slider_box">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                              </div>
+
+                          </div>
+                          <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                          <div class="flex_star">
+                              <div class="star">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star.svg" alt="img">
+                              </div>
+                              <p>4.67</p>
+                              <span>(12 отзывов)</span>
+                          </div>
+                          <a href="#4" class="flex_batton">
+                              <div>
+                                  <p>10 190 ₽</p>
+                                  <span>12 450 ₽</span>
+                              </div>
+                              <div>
+                                  <img src="./images/Icon.svg" alt="img">
+                              </div>
+                          </a>
+                      </div>
+                      <div class="item">
+
+                          <!-- item flex text  -->
+
+                          <div class="flex_in">
+                              <div>
+                                  <img src="./images/check.svg" alt="img">
+                              </div>
+                              <span>В наличии</span>
+                          </div>
+
+                          <!-- mini slider boshlandi  -->
+
+                          <div class="mini_slider">
+
+                              <div class="mini_item">
+                                  <img src="./images/image 198.png" alt="img">
+                                  <img src="./images/image 199.png" alt="img">
+                                  <img src="./images/image 200.png" alt="img">
+                                  <img src="./images/image 201.png" alt="img">
+                              </div>
+
+                              <div class="mini_slider_box">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                              </div>
+
+                          </div>
+                          <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                          <div class="flex_star">
+                              <div class="star">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star.svg" alt="img">
+                              </div>
+                              <p>4.67</p>
+                              <span>(12 отзывов)</span>
+                          </div>
+                          <a href="#4" class="flex_batton">
+                              <div>
+                                  <p>10 190 ₽</p>
+                                  <span>12 450 ₽</span>
+                              </div>
+                              <div>
+                                  <img src="./images/Icon.svg" alt="img">
+                              </div>
+                          </a>
+                      </div>
+                      <div class="item">
+
+                          <!-- item flex text  -->
+
+                          <div class="flex_in">
+                              <div>
+                                  <img src="./images/check.svg" alt="img">
+                              </div>
+                              <span>В наличии</span>
+                          </div>
+
+                          <!-- mini slider boshlandi  -->
+
+                          <div class="mini_slider">
+
+                              <div class="mini_item">
+                                  <img src="./images/image 198.png" alt="img">
+                                  <img src="./images/image 199.png" alt="img">
+                                  <img src="./images/image 200.png" alt="img">
+                                  <img src="./images/image 201.png" alt="img">
+                              </div>
+
+                              <div class="mini_slider_box">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                              </div>
+
+                          </div>
+                          <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                          <div class="flex_star">
+                              <div class="star">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star.svg" alt="img">
+                              </div>
+                              <p>4.67</p>
+                              <span>(12 отзывов)</span>
+                          </div>
+                          <a href="#4" class="flex_batton">
+                              <div>
+                                  <p>10 190 ₽</p>
+                                  <span>12 450 ₽</span>
+                              </div>
+                              <div>
+                                  <img src="./images/Icon.svg" alt="img">
+                              </div>
+                          </a>
+                      </div>
+                      <div class="item">
+
+                          <!-- item flex text  -->
+
+                          <div class="flex_in">
+                              <div>
+                                  <img src="./images/check.svg" alt="img">
+                              </div>
+                              <span>В наличии</span>
+                          </div>
+
+                          <!-- mini slider boshlandi  -->
+
+                          <div class="mini_slider">
+
+                              <div class="mini_item">
+                                  <img src="./images/image 198.png" alt="img">
+                                  <img src="./images/image 199.png" alt="img">
+                                  <img src="./images/image 200.png" alt="img">
+                                  <img src="./images/image 201.png" alt="img">
+                              </div>
+
+                              <div class="mini_slider_box">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                              </div>
+
+                          </div>
+                          <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                          <div class="flex_star">
+                              <div class="star">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star.svg" alt="img">
+                              </div>
+                              <p>4.67</p>
+                              <span>(12 отзывов)</span>
+                          </div>
+                          <a href="#4" class="flex_batton">
+                              <div>
+                                  <p>10 190 ₽</p>
+                                  <span>12 450 ₽</span>
+                              </div>
+                              <div>
+                                  <img src="./images/Icon.svg" alt="img">
+                              </div>
+                          </a>
+                      </div>
+                      <div class="item">
+
+                          <!-- item flex text  -->
+
+                          <div class="flex_in">
+                              <div>
+                                  <img src="./images/check.svg" alt="img">
+                              </div>
+                              <span>В наличии</span>
+                          </div>
+
+                          <!-- mini slider boshlandi  -->
+
+                          <div class="mini_slider">
+
+                              <div class="mini_item">
+                                  <img src="./images/image 198.png" alt="img">
+                                  <img src="./images/image 199.png" alt="img">
+                                  <img src="./images/image 200.png" alt="img">
+                                  <img src="./images/image 201.png" alt="img">
+                              </div>
+
+                              <div class="mini_slider_box">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                              </div>
+
+                          </div>
+                          <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                          <div class="flex_star">
+                              <div class="star">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star.svg" alt="img">
+                              </div>
+                              <p>4.67</p>
+                              <span>(12 отзывов)</span>
+                          </div>
+                          <a href="#4" class="flex_batton">
+                              <div>
+                                  <p>10 190 ₽</p>
+                                  <span>12 450 ₽</span>
+                              </div>
+                              <div>
+                                  <img src="./images/Icon.svg" alt="img">
+                              </div>
+                          </a>
+                      </div>
+                      <div class="item">
+
+                          <!-- item flex text  -->
+
+                          <div class="flex_in">
+                              <div>
+                                  <img src="./images/check.svg" alt="img">
+                              </div>
+                              <span>В наличии</span>
+                          </div>
+
+                          <!-- mini slider boshlandi  -->
+
+                          <div class="mini_slider">
+
+                              <div class="mini_item">
+                                  <img src="./images/image 198.png" alt="img">
+                                  <img src="./images/image 199.png" alt="img">
+                                  <img src="./images/image 200.png" alt="img">
+                                  <img src="./images/image 201.png" alt="img">
+                              </div>
+
+                              <div class="mini_slider_box">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                              </div>
+
+                          </div>
+                          <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                          <div class="flex_star">
+                              <div class="star">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star.svg" alt="img">
+                              </div>
+                              <p>4.67</p>
+                              <span>(12 отзывов)</span>
+                          </div>
+                          <a href="#4" class="flex_batton">
+                              <div>
+                                  <p>10 190 ₽</p>
+                                  <span>12 450 ₽</span>
+                              </div>
+                              <div>
+                                  <img src="./images/Icon.svg" alt="img">
+                              </div>
+                          </a>
+                      </div>
+                      <div class="item">
+
+                          <!-- item flex text  -->
+
+                          <div class="flex_in">
+                              <div>
+                                  <img src="./images/check.svg" alt="img">
+                              </div>
+                              <span>В наличии</span>
+                          </div>
+
+                          <!-- mini slider boshlandi  -->
+
+                          <div class="mini_slider">
+
+                              <div class="mini_item">
+                                  <img src="./images/image 198.png" alt="img">
+                                  <img src="./images/image 199.png" alt="img">
+                                  <img src="./images/image 200.png" alt="img">
+                                  <img src="./images/image 201.png" alt="img">
+                              </div>
+
+                              <div class="mini_slider_box">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                              </div>
+
+                          </div>
+                          <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                          <div class="flex_star">
+                              <div class="star">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star.svg" alt="img">
+                              </div>
+                              <p>4.67</p>
+                              <span>(12 отзывов)</span>
+                          </div>
+                          <a href="#4" class="flex_batton">
+                              <div>
+                                  <p>10 190 ₽</p>
+                                  <span>12 450 ₽</span>
+                              </div>
+                              <div>
+                                  <img src="./images/Icon.svg" alt="img">
+                              </div>
+                          </a>
+                      </div>
+                      <div class="item">
+
+                          <!-- item flex text  -->
+
+                          <div class="flex_in">
+                              <div>
+                                  <img src="./images/check.svg" alt="img">
+                              </div>
+                              <span>В наличии</span>
+                          </div>
+
+                          <!-- mini slider boshlandi  -->
+
+                          <div class="mini_slider">
+
+                              <div class="mini_item">
+                                  <img src="./images/image 198.png" alt="img">
+                                  <img src="./images/image 199.png" alt="img">
+                                  <img src="./images/image 200.png" alt="img">
+                                  <img src="./images/image 201.png" alt="img">
+                              </div>
+
+                              <div class="mini_slider_box">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                              </div>
+
+                          </div>
+                          <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                          <div class="flex_star">
+                              <div class="star">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star.svg" alt="img">
+                              </div>
+                              <p>4.67</p>
+                              <span>(12 отзывов)</span>
+                          </div>
+                          <a href="#4" class="flex_batton">
+                              <div>
+                                  <p>10 190 ₽</p>
+                                  <span>12 450 ₽</span>
+                              </div>
+                              <div>
+                                  <img src="./images/Icon.svg" alt="img">
+                              </div>
+                          </a>
+                      </div>
+                      <div class="item">
+
+                          <!-- item flex text  -->
+
+                          <div class="flex_in">
+                              <div>
+                                  <img src="./images/check.svg" alt="img">
+                              </div>
+                              <span>В наличии</span>
+                          </div>
+
+                          <!-- mini slider boshlandi  -->
+
+                          <div class="mini_slider">
+
+                              <div class="mini_item">
+                                  <img src="./images/image 198.png" alt="img">
+                                  <img src="./images/image 199.png" alt="img">
+                                  <img src="./images/image 200.png" alt="img">
+                                  <img src="./images/image 201.png" alt="img">
+                              </div>
+
+                              <div class="mini_slider_box">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                              </div>
+
+                          </div>
+                          <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                          <div class="flex_star">
+                              <div class="star">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star.svg" alt="img">
+                              </div>
+                              <p>4.67</p>
+                              <span>(12 отзывов)</span>
+                          </div>
+                          <a href="#4" class="flex_batton">
+                              <div>
+                                  <p>10 190 ₽</p>
+                                  <span>12 450 ₽</span>
+                              </div>
+                              <div>
+                                  <img src="./images/Icon.svg" alt="img">
+                              </div>
+                          </a>
+                      </div>
+                      <div class="item">
+
+                          <!-- item flex text  -->
+
+                          <div class="flex_in">
+                              <div>
+                                  <img src="./images/check.svg" alt="img">
+                              </div>
+                              <span>В наличии</span>
+                          </div>
+
+                          <!-- mini slider boshlandi  -->
+
+                          <div class="mini_slider">
+
+                              <div class="mini_item">
+                                  <img src="./images/image 198.png" alt="img">
+                                  <img src="./images/image 199.png" alt="img">
+                                  <img src="./images/image 200.png" alt="img">
+                                  <img src="./images/image 201.png" alt="img">
+                              </div>
+
+                              <div class="mini_slider_box">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                              </div>
+
+                          </div>
+                          <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                          <div class="flex_star">
+                              <div class="star">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star.svg" alt="img">
+                              </div>
+                              <p>4.67</p>
+                              <span>(12 отзывов)</span>
+                          </div>
+                          <a href="#4" class="flex_batton">
+                              <div>
+                                  <p>10 190 ₽</p>
+                                  <span>12 450 ₽</span>
+                              </div>
+                              <div>
+                                  <img src="./images/Icon.svg" alt="img">
+                              </div>
+                          </a>
+                      </div>
+                      <div class="item">
+
+                          <!-- item flex text  -->
+
+                          <div class="flex_in">
+                              <div>
+                                  <img src="./images/check.svg" alt="img">
+                              </div>
+                              <span>В наличии</span>
+                          </div>
+
+                          <!-- mini slider boshlandi  -->
+
+                          <div class="mini_slider">
+
+                              <div class="mini_item">
+                                  <img src="./images/image 198.png" alt="img">
+                                  <img src="./images/image 199.png" alt="img">
+                                  <img src="./images/image 200.png" alt="img">
+                                  <img src="./images/image 201.png" alt="img">
+                              </div>
+
+                              <div class="mini_slider_box">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                              </div>
+
+                          </div>
+                          <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                          <div class="flex_star">
+                              <div class="star">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star.svg" alt="img">
+                              </div>
+                              <p>4.67</p>
+                              <span>(12 отзывов)</span>
+                          </div>
+                          <a href="#4" class="flex_batton">
+                              <div>
+                                  <p>10 190 ₽</p>
+                                  <span>12 450 ₽</span>
+                              </div>
+                              <div>
+                                  <img src="./images/Icon.svg" alt="img">
+                              </div>
+                          </a>
+                      </div>
+                      <div class="item">
+
+                          <!-- item flex text  -->
+
+                          <div class="flex_in">
+                              <div>
+                                  <img src="./images/check.svg" alt="img">
+                              </div>
+                              <span>В наличии</span>
+                          </div>
+
+                          <!-- mini slider boshlandi  -->
+
+                          <div class="mini_slider">
+
+                              <div class="mini_item">
+                                  <img src="./images/image 198.png" alt="img">
+                                  <img src="./images/image 199.png" alt="img">
+                                  <img src="./images/image 200.png" alt="img">
+                                  <img src="./images/image 201.png" alt="img">
+                              </div>
+
+                              <div class="mini_slider_box">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                              </div>
+
+                          </div>
+                          <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                          <div class="flex_star">
+                              <div class="star">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star.svg" alt="img">
+                              </div>
+                              <p>4.67</p>
+                              <span>(12 отзывов)</span>
+                          </div>
+                          <a href="#4" class="flex_batton">
+                              <div>
+                                  <p>10 190 ₽</p>
+                                  <span>12 450 ₽</span>
+                              </div>
+                              <div>
+                                  <img src="./images/Icon.svg" alt="img">
+                              </div>
+                          </a>
+                      </div>
+                      <div class="item">
+
+                          <!-- item flex text  -->
+
+                          <div class="flex_in">
+                              <div>
+                                  <img src="./images/check.svg" alt="img">
+                              </div>
+                              <span>В наличии</span>
+                          </div>
+
+                          <!-- mini slider boshlandi  -->
+
+                          <div class="mini_slider">
+
+                              <div class="mini_item">
+                                  <img src="./images/image 198.png" alt="img">
+                                  <img src="./images/image 199.png" alt="img">
+                                  <img src="./images/image 200.png" alt="img">
+                                  <img src="./images/image 201.png" alt="img">
+                              </div>
+
+                              <div class="mini_slider_box">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                              </div>
+
+                          </div>
+                          <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                          <div class="flex_star">
+                              <div class="star">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star.svg" alt="img">
+                              </div>
+                              <p>4.67</p>
+                              <span>(12 отзывов)</span>
+                          </div>
+                          <a href="#4" class="flex_batton">
+                              <div>
+                                  <p>10 190 ₽</p>
+                                  <span>12 450 ₽</span>
+                              </div>
+                              <div>
+                                  <img src="./images/Icon.svg" alt="img">
+                              </div>
+                          </a>
+                      </div>
+                      <div class="item">
+
+                          <!-- item flex text  -->
+
+                          <div class="flex_in">
+                              <div>
+                                  <img src="./images/check.svg" alt="img">
+                              </div>
+                              <span>В наличии</span>
+                          </div>
+
+                          <!-- mini slider boshlandi  -->
+
+                          <div class="mini_slider">
+
+                              <div class="mini_item">
+                                  <img src="./images/image 198.png" alt="img">
+                                  <img src="./images/image 199.png" alt="img">
+                                  <img src="./images/image 200.png" alt="img">
+                                  <img src="./images/image 201.png" alt="img">
+                              </div>
+
+                              <div class="mini_slider_box">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                              </div>
+
+                          </div>
+                          <p>Бинокль БПЦ2 10х40 (обрезин., рубин)</p>
+                          <div class="flex_star">
+                              <div class="star">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star_filled.svg" alt="img">
+                                  <img src="./images/Star.svg" alt="img">
+                              </div>
+                              <p>4.67</p>
+                              <span>(12 отзывов)</span>
+                          </div>
+                          <a href="#4" class="flex_batton">
+                              <div>
+                                  <p>10 190 ₽</p>
+                                  <span>12 450 ₽</span>
+                              </div>
+                              <div>
+                                  <img src="./images/Icon.svg" alt="img">
+                              </div>
+                          </a>
+                      </div>
+                  </div>
+
+                  <!-- slider spans  -->
+
+                  <div class="slider_box">
+
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      
+                  </div>
+
+                  <button class="left">
+                    <img src="./images/Path.svg" alt="img">
+                  </button>
+
+                  <button class="right">
+                    <img src="./images/Path.svg" alt="img">
+                  </button>
+              </div>
+        </div>
       </div>
     </section>
     <!-- product end -->
@@ -351,9 +2608,9 @@
                   <p>Любительский<span> (32)</span></p>
                 </div>
 
-                <!-- <button>
+                <button>
                   Показать все <i class="fa-solid fa-ellipsis"></i>
-                </button> -->
+                </button>
               </div>
             </div>
             <div class="our-products-boxes">
@@ -500,26 +2757,172 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- Our products end -->
 
     <!-- about start -->
     <section id="about">
-      <div class="container">
-        <div class="container-wrap"></div>
-      </div>
+        <div class="container">
+            <div class="container-wrap">
+                    <h1>Магазин оптических приборов Tele-Optics.Ru</h1>
+                    <p>Наша компания существует на рынке оптических приборов более 5 лет. За это время мы сделали умнее и счастливие огромное количество людей. Как показало время, нельзя постоянно быть одинаковыми и удовлетворять запросы самых требовательных покупателей. Теперь мы предстаем перед Вами в новом облике, с новыми подходами, новым внешним видом, новейшим функционалом, который сделает Ваше время, проведенное у нас, не только приятным, но и полезным!</p>
+                    <h3>Наша компания ставит перед собой только реальные цели:</h3>
+
+                    <ul>
+                        <li>улучшение соотношения цена-качество путем предоставления скидок постоянным клиентам;</li>
+                        <li>многообразие возможностей доставки и оплаты Ваших покупок;</li>
+                        <li>увеличение количества дополнительных услуг;</li>
+                        <li>сотрудничество с самыми известными производителями оптических приборов и развивающих игрушек;</li>
+                        <li>грамотные консультации по всему представленному ассортименту;</li>
+                        <li>обеспечения безупречного качества поставляемых товаров.</li>
+                    </ul>               
+                     
+                    
+                    
+            </div>
+        </div>
     </section>
     <!-- about end -->
 
     <!-- footer start -->
     <footer>
-      <div class="container">
-        <div class="container-wrap"></div>
-      </div>
+
+        <div class="footer_top">
+           <div class="container">
+                <div class="container-wrap">
+                    <div class="footer_top_main">
+                        <img src="./imgs/Icon.svg" alt="Icon.svg" loading="lazy ">
+                        <p>Промотренные</p>
+                        <span>0</span>     
+                    </div>
+        
+                    <div class="liner"><img src="./imgs/line.svg" alt=""></div>
+        
+                    <div class="footer_top_main">
+                        <img src="./imgs/Icon (1).svg" alt="Icon.svg" loading="lazy ">
+                        <p>Промотренные</p>
+                        <span>0</span>  
+                    </div>
+        
+                    <div class="liner"><img src="./imgs/line.svg" alt=""></div>
+        
+                    <div class="footer_top_main">
+                        <img src="./imgs/Icon (2).svg" alt="Icon.svg" loading="lazy ">
+                        <p>Промотренные</p>
+                        <span>0</span>  
+                    </div>
+        
+                    <div class="liner"><img src="./imgs/line.svg" alt=""></div>
+        
+                    <div class="footer_top_main">
+                        <img src="./imgs/Icon (3).svg" alt="Icon.svg" loading="lazy ">
+                        <p>Промотренные</p>
+                        <span>0</span>  
+                    </div>
+                </div>
+           </div>
+        </div>
+
+        <div class="footer-main">
+            <div class="container">
+                <div class="container-wrap">
+                    <div class="footer_section">
+                        <img class="footer_logo" src="./imgs/logo.svg" alt="logo.sv" loading="lazy">
+
+                        <div class="footer_section_tell">
+                            <img src="./imgs/Icon location.svg" alt="">
+                            <p> Россия, г. Москва, <br>
+                                ул. Никольская, д. 15</p>
+                        </div>
+
+                        <div class="footer_section_tell">
+                            <img src="./imgs/Icon clock.svg" alt="">
+                            <p> Пн-Пт с 09:00-19:00, <br>
+                                Сб-Вс - выходной</p>
+                        </div>                        
+
+                        <div class="footer_section_tell">
+                            <img src="./imgs/Icon gmail.svg" alt="">
+                            <p style="color:  #3697E2;"> sales@tele-optics.ru</p>
+                        </div>
+
+                        <div class="footer_stars">
+                            <h4>Рейтинг магазина</h4>
+                            
+                            <img src="./imgs/rating.svg" alt="rating.svg" loading="lazy">
+                            
+                        </div>
+                    </div>  
+
+                    <div class="footer_section_2">
+                        <h3>Каталог</h3>
+                        <p><a href="#0">Бинокли</a></p>
+                        <p><a href="#0">Телескопы</a></p>
+                        <p><a href="#0">Монокуляры</a></p>
+                        <p><a href="#0">Лупы</a></p>
+                        <p><a href="#0">Зрительные трубы</a></p>
+                        <p><a href="#0">Дальномеры</a></p>
+                        <p><a href="#0">Тепловизоры</a></p>
+                        <p><a href="#0">Приборы ночного <br>
+                            видения</a></p>
+                    </div>
+
+                    <div class="footer_section_2">
+                        <h3>Полезная информация</h3>
+                        <p><a href="#0">Доставка</a></p>
+                        <p><a href="#0">Оплата</a></p>
+                        <p><a href="#0">Возврат</a></p>
+                        <p><a href="#0">Производители</a></p>
+                        <p><a href="#0">Гарантия</a></p>
+                        <p><a href="#0">Статьи</a></p>
+                        <h6>Способы оплаты:</h6>
+                        <div class="footer_section_2_pay">
+                            <img src="./imgs/Group (2).svg" alt="">
+                            <img src="./imgs/Frame (1).svg" alt="">
+                            <img src="./imgs/Frame (2).svg" alt="">
+                            <img src="./imgs/Frame (3).svg" alt="">
+                            <img src="./imgs/Frame (4).svg" alt="">
+                            <img src="./imgs/Frame (5).svg" alt="">
+                            <img src="./imgs/Frame (6).svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="footer_section_2 footer_section_two ">
+                        <h3>Контакты</h3>
+                        <h1>+7 495 215 0744</h1>
+                        <div class="footer_section_2_contact">
+                           
+                            <img src="./imgs/Vector (3).svg" alt="">
+                            <img src="./imgs/tg icon.svg" alt="">
+                            <img src="./imgs/telephone.svg" alt="">
+                            <img src="./imgs/Whatsup.svg" alt="">
+                        </div>
+                        <p><a href="#0">О нас</a></p>
+                        <p><a href="#0">Оптовые продажи</a></p>
+                        <p><a href="#0">Личный кабинет</a></p>
+
+                        <div class="footer_btn">
+                            <button><a href="#0">Подписаться на новости</a></button> <br>
+                             <button style="background-color: #EEEE36;"><a href="#0">Скачать прайс-лист</a></button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer_bottom">
+            <p>© 2022 Бинокль.Все права защищены.</p>
+            <p>Политика конфиденциальности</p>
+            <p>Условия соглашения</p>
+            <p>Карта сайта</p>
+        </div>
     </footer>
     <!-- footer end -->
   </body>
     
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <script src="./javascript/main.js"></script>
 </body>

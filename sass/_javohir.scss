@@ -84,19 +84,20 @@
     }
   
 
-  @media screen and (max-width: 860px) {
-    #popular-categories {
-      .container {
-        .container-wrap {
-          .categorie-hero {
-            grid-template-columns: repeat(3, 1fr);
-            
-          }
+  
+}
+@media screen and (max-width: 860px) {
+  #popular-categories {
+    .container {
+      .container-wrap {
+        .categorie-hero {
+          grid-template-columns: repeat(3, 1fr);
+
         }
       }
     }
   }
-  @media screen and (max-width: 345px) {
-  }
 }
+
+@media screen and (max-width: 345px) {}
 }
