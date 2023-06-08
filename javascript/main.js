@@ -35,3 +35,6 @@ function homeSwiper() {
 homeSwiper();
 
 // Header section swiper end
+
+// o'ktamni qismi boshlandi 
+

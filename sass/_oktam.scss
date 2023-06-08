@@ -17,7 +17,7 @@
     padding: 60px 0;
 
     .container-wrap {
-      & > .flex {
+      &  .flex {
         @include flex(space-between);
         margin-bottom: 20px;
 
@@ -36,11 +36,11 @@
           border: none;
           outline: none;
           cursor: pointer;
-          
+
           span {
-              font-family: "PT Root UI";
-              font-style: normal;
-              font-weight: 500;
+            font-family: "PT Root UI";
+            font-style: normal;
+            font-weight: 500;
             font-size: 16px;
             line-height: 22px;
             color: #15191c;
@@ -52,12 +52,12 @@
           }
 
           &:hover div {
-              transform: scale(1.2);
+            transform: scale(1.2);
           }
 
           div {
             @include flex;
-              transition: all 0.3s ease;
+            transition: all 0.3s ease;
             width: 24px;
             height: 24px;
 
@@ -76,9 +76,9 @@
           overflow: scroll;
           height: 425px;
 
-          &::-webkit-scrollbar {
-            display: none;
-          }
+          // &::-webkit-scrollbar {
+          //   display: none;
+          // }
 
           .item {
             padding: 10px 20px 20px;
@@ -102,6 +102,8 @@
             }
 
             .mini_slider {
+              position: relative;
+
               .mini_item {
                 margin: 0 auto;
                 width: 100%;
@@ -137,6 +139,29 @@
                     background: #9a9c9e;
                   }
                 }
+              }
+
+              .item_poa {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                @include flex(center, center, 15px, column);
+                transition: all 0.3s ease;
+                width: 0;
+                overflow: hidden;
+
+                a {
+                  padding: 3px;
+                  width: 30px;
+                  height: 30px;
+                  background: #f2f5f9;
+                  border-radius: 5px;
+                }
+              }
+
+              &:hover .item_poa {
+                width: 40px;
               }
             }
 
@@ -293,6 +318,159 @@
       }
     }
   }
+
+  @media screen and (max-width: 770px) {
+    #bestsellers {
+      .container-wrap {
+        & > .flex {
+          margin-bottom: 15px;
+        }
+
+        .slider {
+          .slider_in {
+            gap: 10px;
+            .item {
+              padding: 15px;
+              min-width: 236px;
+              height: 392px;
+              box-shadow: 0px 5px 20px rgba(63, 66, 69, 0.05);
+
+              .flex_batton {
+                div {
+                  p {
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 28px;
+                  }
+
+                  span {
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 20px;
+                  }
+                }
+              }
+
+              .dis_none {
+                display: none;
+              }
+
+              .mini_slider {
+                width: 100%;
+
+                .mini_item {
+                  padding: 0;
+
+                  img {
+                    width: 100%;
+                  }
+                }
+
+                .item_poa {
+                  position: absolute;
+                  top: 50%;
+                  right: 0;
+                  transform: translateY(-50%);
+                  @include flex(center, center, 15px, column);
+                  transition: all 0.3s ease;
+                  width: 40px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 430px) {
+    #bestsellers {
+      .container-wrap {
+
+        .flex{
+          h1{
+            
+font-size: 24px;
+line-height: 28px;
+          }
+
+          button{
+            span{
+              
+font-size: 14px;
+line-height: 18px;
+            }
+          }
+        }
+
+        .slider {
+          .slider_in {
+            .item {
+              padding: 15px 10px;
+              min-width: 167px;
+              height: 302px;
+
+              .flex_star {
+                gap: 3px;
+              }
+
+              .flex_batton {
+                div {
+                  @include flex(center, start, 0, column);
+
+                  p {
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 22px;
+                  }
+
+                  span {
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 18px;
+                  }
+                }
+              }
+
+              & > p {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 18px;
+              }
+
+              .dis_none {
+                display: none;
+              }
+
+              .mini_slider {
+                width: 100%;
+
+                .mini_item {
+                  padding: 0;
+                  height: 120px;
+
+                  img {
+                    width: 100%;
+                    height: 120px;
+                  }
+                }
+
+                .item_poa {
+                  position: absolute;
+                  top: 50%;
+                  right: 0;
+                  transform: translateY(-50%) scale(0.8);
+                  @include flex(center, center, 15px, column);
+                  transition: all 0.3s ease;
+                  width: 40px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @mixin brands {
   #brands {
@@ -312,7 +490,7 @@
         color: #15191c;
       }
 
-      a{
+      a {
         @include flex(center, center, 15px);
         background-color: transparent;
         border: none;
@@ -341,17 +519,23 @@
           }
         }
 
-        &:hover div{
-            transform: scale(1.2);
+        &:hover div {
+          transform: scale(1.2);
         }
       }
     }
 
+    .carusel_out {
+      width: 100%;
+      overflow: hidden;
+      @include flex(center, center, 0px, column);
+    }
+
     .corusel {
       width: 100%;
-      height: 120px;
+      min-width: 800px;
+      height: 100px;
       position: relative;
-      overflow: hidden;
 
       .item {
         width: 180px;
@@ -361,26 +545,60 @@
         border-radius: 10px;
         @include flex;
         position: absolute;
-        top: 10px;
+        top: 0;
         left: 0;
         cursor: pointer;
         transition: all 0.3s ease;
-        animation: anime 5s linear  infinite  ;
-        animation-delay: calc(var(--j) * -1s) ;
+        animation: anime 5s linear infinite;
+        animation-delay: calc(var(--j) * -1s);
 
-        &:hover{
-            transform: scale(1.1);
+        &:hover {
+          transform: scale(0.9);
         }
-
       }
 
       @keyframes anime {
-        from{
-            left: -15%;
+        from {
+          left: -15%;
         }
-        to{
-            left: 110%;
+        to {
+          left: 110%;
         }
+      }
+    }
+
+    .carusel_2 {
+      display: none;
+      .item {
+        animation-direction: reverse;
+      }
+    }
+  }
+
+  @media screen and (max-width: 770px) {
+    #brands {
+      .corusel {
+        .item {
+          width: 160px;
+          height: 80px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 430px) {
+    #brands {
+      .carusel_out {
+        @include flex(center, center, 10px, column);
+      }
+
+      .corusel {
+        min-width: 700px;
+        height: 80px;
+      }
+
+      .carusel_2 {
+        display: flex;
       }
     }
   }
@@ -388,8 +606,8 @@
 @mixin product {
   #product {
     @extend #bestsellers;
-
     .flex {
+
       ul {
         @include flex;
 
@@ -443,6 +661,29 @@
         div {
           background-color: #3697e2;
           border: 1px solid #0696e7;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1010px) {
+    #product {
+
+      div:first-child{
+        overflow: hidden;
+      }
+
+      div > .flex{
+        min-width: 770px;
+        ul{
+          li{
+            a{
+              
+font-size: 18px;
+line-height: 24px;
+padding: 3px 5px;
+            }
+          }
         }
       }
     }
