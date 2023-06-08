@@ -213,14 +213,6 @@ body header nav .nav-middle .container .container-wrap .nav-search input::-moz-p
   line-height: 22px;
   color: #747883;
 }
-body header nav .nav-middle .container .container-wrap .nav-search input:-ms-input-placeholder {
-  font-family: "PT Root UI";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-  color: #747883;
-}
 body header nav .nav-middle .container .container-wrap .nav-search input::placeholder {
   font-family: "PT Root UI";
   font-style: normal;
@@ -1082,6 +1074,9 @@ body #bestsellers, body #product {
   background: #f7f8fb;
   padding: 60px 0;
 }
+body #bestsellers *, body #product * {
+  scroll-behavior: smooth;
+}
 body #bestsellers .container-wrap .flex, body #product .container-wrap .flex {
   display: flex;
   justify-content: space-between;
@@ -1318,8 +1313,7 @@ body #bestsellers .container-wrap .slider .slider_in .item .flex_batton div span
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-  -webkit-text-decoration-line: line-through;
-          text-decoration-line: line-through;
+  text-decoration-line: line-through;
   color: #9a9c9e;
 }
 body #bestsellers .container-wrap .slider .slider_in .item .flex_batton div:nth-child(2), body #product .container-wrap .slider .slider_in .item .flex_batton div:nth-child(2) {
@@ -1596,21 +1590,11 @@ body #brands .corusel .item {
   left: 0;
   cursor: pointer;
   transition: all 0.3s ease;
-  -webkit-animation: anime 5s linear infinite;
-          animation: anime 5s linear infinite;
-  -webkit-animation-delay: calc(var(--j) * -1s);
-          animation-delay: calc(var(--j) * -1s);
+  animation: anime 5s linear infinite;
+  animation-delay: calc(var(--j) * -1s);
 }
 body #brands .corusel .item:hover {
   transform: scale(0.9);
-}
-@-webkit-keyframes anime {
-  from {
-    left: -15%;
-  }
-  to {
-    left: 110%;
-  }
 }
 @keyframes anime {
   from {

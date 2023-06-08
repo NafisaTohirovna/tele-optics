@@ -115,6 +115,9 @@ Array.from(Array(number).keys()).map((item) => {
 
 let sliderIn = document.querySelectorAll(".slider_in")
 let sliderBox = document.querySelectorAll(".slider_box")
+let left = document.querySelectorAll('.slider .left')
+let right = document.querySelectorAll('.slider .right')
+
 let numberTwo = sliderBox.length
 
 Array.from(Array(numberTwo).keys()).map((item) => {
@@ -154,26 +157,49 @@ Array.from(Array(numberTwo).keys()).map((item) => {
     {
       sliderBox[item].children[4].style.background = '#d7d9dc';
     }
+
   })
   sliderBox[item].children[4].addEventListener('click' , () => {
-    sliderIn[item].scrollLeft = 4500
+    sliderIn[item].scrollLeft = 4530
   })
   
   sliderBox[item].children[3].addEventListener('click' , () => {
-    sliderIn[item].scrollLeft = 3563
+    sliderIn[item].scrollLeft = 3570
   })
 
   sliderBox[item].children[2].addEventListener('click' , () => {
-    sliderIn[item].scrollLeft = 2382
+    sliderIn[item].scrollLeft = 2400
   })
 
   sliderBox[item].children[1].addEventListener('click' , () => {
-    sliderIn[item].scrollLeft = 1180
+    sliderIn[item].scrollLeft = 1200
   })
 
   sliderBox[item].children[0].addEventListener('click' , () => {
     sliderIn[item].scrollLeft = 0
   })
 
+
+  right[item].addEventListener('click' , () => {
+    sliderIn[item].scrollBy(283 , 0)
+  })
+
+  left[item].addEventListener('click' , () => {
+    sliderIn[item].scrollBy(-283 , 0)
+  })
 })
+
+
+let flexList = document.querySelectorAll("#product ul li")
+
+Array.from(Array(4).keys()).map((item) => {
+  flexList[item].addEventListener('click' , () => {
+    flexList.forEach((i) => {
+      i.classList.remove('active');
+    })
+    flexList[item].classList.add('active')
+  })
+})
+
+
 
