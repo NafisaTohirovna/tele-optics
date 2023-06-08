@@ -1,10 +1,207 @@
 @mixin about {
     #about{
-        
+        .container{
+            .container-wrap{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                h1{
+                    font-family: 'Circe';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 32px;
+                    line-height: 46px;
+                    color: #15191C;
+                }
+
+                p{
+                    font-family: 'PT Root UI';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: #15191C;
+                    width: 1170px;
+                }
+
+                h3{
+                    font-family: 'PT Root UI';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: #15191C;
+                }
+
+                ul{
+                    padding: 0 0 60px 15px;
+                    li{
+                        font-family: 'PT Root UI';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 22px;
+                        color: #3A3F43;
+                        list-style-type: circle; 
+                    }
+                }
+            }
+        }
     }
 }
 @mixin footer {
     footer{
-        
+        // background: #535E69;
+        .footer_top{
+            background-color: #535E69;
+            .container{
+                .container-wrap{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 40px; 
+                    padding: 24px 0;
+                    
+                    .footer_top_main{
+
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                        span{
+                            display: block;
+                            width: 25px;
+                            height: 25px;
+                            border-radius: 50%;
+                            padding: 3px 7px;
+                            border: 1px solid #FFFFFF;
+                            background: #9A9C9E;
+                        }
+                        
+                    }
+                }
+            }
+        }
+
+        .footer-main{
+            .container{
+                .container-wrap{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 40px 0 20px 0;
+                    background: #F7F8FB;
+                    .footer_section{
+                        .footer_logo{
+                            margin-bottom: 20px;
+                        }
+                        .footer_section_tell{
+                            display: flex;
+                            gap: 14px;
+                            margin-bottom: 15px;
+                        }
+                        .footer_stars{
+                            background-color: #F7F8FB;
+                            border: 1px solid #D7D9DC;
+                            border-radius: 3px;
+                            width: 130px;
+                            height: 77px;
+                            align-items: center;
+                            padding-left: 15px;
+                            margin-top: 21px;
+
+                            h4{
+                                font-family: 'PT Root UI';
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 12px;
+                                line-height: 36px;
+                                color: #15191C;
+                            }
+                        }
+                    }
+
+                    .footer_section_2{
+                        h3{
+                            font-family: 'PT Root UI';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 20px;
+                            line-height: 28px;
+                            color: #15191C;
+                            margin-bottom: 15px;
+                        }
+
+                        p{
+                            font-family: 'PT Root UI';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 22px;
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 5px;
+                            a{
+                                color: #3A3F43;
+                            }
+                        }
+
+                        h6{
+                            font-family: 'PT Root UI';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 14px;
+                            line-height: 18px;
+                            color: #747883;
+                            margin-bottom: 13px;
+                        }
+
+                        .footer_section_2_pay{
+                            width: 180px;
+                        }
+
+                        h1{
+                            font-family: 'Circe';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 24px;
+                            line-height: 28px;
+                            margin-bottom: 10px;
+                        }
+
+                        .footer_section_2_contact{
+                            display: flex;
+                            gap: 31px;
+                            margin-bottom: 15px;
+                        }
+
+                        .footer_btn{
+                           
+                             button{
+                                    padding: 11px 15px;
+                                    border-radius: 5px;
+                                    background: #FFFFFF;
+                                    border: none;
+                                    margin-bottom: 10px;
+
+                                        a{
+                                            font-family: 'PT Root UI';
+                                            font-style: normal;
+                                            font-weight: 500;
+                                            font-size: 14px;
+                                            line-height: 18px;
+                                            color: #3697E2;
+                                        }
+                                }
+                         }
+
+                    }
+                }
+            }
+        }
+
+        .footer_bottom{
+            display: flex;
+            justify-content: space-around;
+            padding: 21px 0;
+        }
     }
 }
