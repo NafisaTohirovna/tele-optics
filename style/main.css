@@ -73,6 +73,7 @@ body header nav .nav-top .container .container-wrap .nav-bar .nav-link .nav-item
   border-radius: 5px;
 }
 body header nav .nav-top .container .container-wrap .nav-bar .nav-link .nav-item .dropdown {
+  z-index: 3;
   position: relative;
   display: inline-block;
 }
@@ -270,6 +271,7 @@ body header nav .nav-menu .container .container-wrap .menu-link .menu-item a i {
 body header nav .nav-menu .container .container-wrap .menu-link .menu-item .dropdown {
   position: relative;
   display: inline-block;
+  z-index: 3;
 }
 body header nav .nav-menu .container .container-wrap .menu-link .menu-item .dropdown .dropbtn {
   background: transparent;
