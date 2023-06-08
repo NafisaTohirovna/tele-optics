@@ -169,6 +169,11 @@
          #popular-categories {
            .container {
              .container-wrap {
+              .categories-text{
+                h2{
+                  font-size: 25px;
+                }
+              }
                .categories-hero-brand {
                  padding: 15px 40px;
   
@@ -179,7 +184,7 @@
                }
   
                h2 {
-                 font-size: 20px;
+                 font-size: 18px;
                  max-width: 100px;
                }
              }

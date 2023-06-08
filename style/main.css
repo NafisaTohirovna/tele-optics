@@ -4,6 +4,11 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -208,6 +213,14 @@ body header nav .nav-middle .container .container-wrap .nav-search input::-moz-p
   line-height: 22px;
   color: #747883;
 }
+body header nav .nav-middle .container .container-wrap .nav-search input:-ms-input-placeholder {
+  font-family: "PT Root UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #747883;
+}
 body header nav .nav-middle .container .container-wrap .nav-search input::placeholder {
   font-family: "PT Root UI";
   font-style: normal;
@@ -401,6 +414,12 @@ body header nav .nav-menu .container .container-wrap .menu-link .menu-item .drop
 }
 body header nav .nav-menu .container .container-wrap .menu-link .menu-item .dropdown:hover .dropbtn i {
   transform: rotate(180deg);
+}
+body header nav .nav-menu .container .container-wrap .menu-link .nav-teg {
+  display: none;
+}
+body header nav .nav-menu .container .container-wrap .menu-link .close {
+  display: none;
 }
 body header nav .nav-menu .container .container-wrap .menu-link .menu-item:hover a {
   color: #0867D6;
@@ -692,27 +711,27 @@ body header .header-home .container .container-wrap .homeSwiper2 .swiper-paginat
     width: 100%;
   }
   body header nav .nav-top {
-    display: none;
-  }
-  body header nav .nav-top.active {
-    display: block;
+    left: -100%;
     background: #FFFFFF;
-    position: absolute;
+    overflow-y: scroll;
+    height: 100%;
+    position: fixed;
     top: 60px;
     width: 100%;
     z-index: 16;
+    transition: all 0.5s ease;
   }
-  body header nav .nav-top.active .container .container-wrap {
+  body header nav .nav-top .container .container-wrap {
     flex-direction: column;
     align-items: start;
   }
-  body header nav .nav-top.active .container .container-wrap .nav-teg {
+  body header nav .nav-top .container .container-wrap .nav-teg {
     display: block;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  body header nav .nav-top.active .container .container-wrap .nav-teg a {
+  body header nav .nav-top .container .container-wrap .nav-teg a {
     font-family: "PT Root UI";
     font-style: normal;
     font-weight: 500;
@@ -720,48 +739,51 @@ body header .header-home .container .container-wrap .homeSwiper2 .swiper-paginat
     line-height: 22px;
     color: #0867D6;
   }
-  body header nav .nav-top.active .container .container-wrap .nav-teg span a i {
+  body header nav .nav-top .container .container-wrap .nav-teg span a i {
     color: #3A3F43;
     font-size: 17px;
     margin-right: 10px;
   }
-  body header nav .nav-top.active .container .container-wrap .nav-bar .nav-link {
+  body header nav .nav-top .container .container-wrap .nav-bar .nav-link {
     flex-direction: column;
     align-items: start;
   }
-  body header nav .nav-top.active .container .container-wrap .nav-bar .nav-link .dropdown {
+  body header nav .nav-top .container .container-wrap .nav-bar .nav-link .nav-item .dropdown {
     display: none;
   }
-  body header nav .nav-top.active .container .container-wrap .nav-bar .nav-item:nth-child(6) {
+  body header nav .nav-top .container .container-wrap .nav-bar .nav-link .nav-item:nth-child(6) {
     display: block;
   }
-  body header nav .nav-top.active .container .container-wrap .nav-bar .nav-item:nth-child(7) {
+  body header nav .nav-top .container .container-wrap .nav-bar .nav-link .nav-item:nth-child(7) {
     display: block;
   }
-  body header nav .nav-top.active .container .container-wrap .nav-bar .nav-item:nth-child(8) {
+  body header nav .nav-top .container .container-wrap .nav-bar .nav-link .nav-item:nth-child(8) {
     display: block;
   }
-  body header nav .nav-top.active .container .container-wrap .nav-bar .nav-item:nth-child(9) {
+  body header nav .nav-top .container .container-wrap .nav-bar .nav-link .nav-item:nth-child(9) {
     display: block;
   }
-  body header nav .nav-top.active .container .container-wrap .nav-bar .nav-item:nth-child(10) {
+  body header nav .nav-top .container .container-wrap .nav-bar .nav-link .nav-item:nth-child(10) {
     display: block;
   }
-  body header nav .nav-top.active .container .container-wrap .nav-bar .nav-item:nth-child(11) {
+  body header nav .nav-top .container .container-wrap .nav-bar .nav-link .nav-item:nth-child(11) {
+    display: none;
+  }
+  body header nav .nav-top .container .container-wrap .nav-gmail {
     display: block;
   }
-  body header nav .nav-top.active .container .container-wrap .nav-gmail {
-    display: block;
-  }
-  body header nav .nav-top.active .container .container-wrap .nav-message-icons {
+  body header nav .nav-top .container .container-wrap .nav-message-icons {
     flex-direction: column;
     align-items: start;
     gap: 20px;
   }
-  body header nav .nav-top.active .container .container-wrap div {
+  body header nav .nav-top .container .container-wrap div {
     padding: 16px 0;
     width: 100%;
     border-bottom: 1px solid #D7D9DC;
+  }
+  body header nav .nav-top.active {
+    left: 0;
   }
   body header nav .nav-middle .container .container-wrap {
     padding: 15px 0;
@@ -838,8 +860,61 @@ body header .header-home .container .container-wrap .homeSwiper2 .swiper-paginat
     display: flex;
     gap: 10px;
   }
-  body header nav .nav-menu {
+  body header nav .nav-menu .container .container-wrap .menu-link {
+    position: fixed;
+    background: #FFFFFF;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    justify-content: start;
+    right: -100%;
+    transition: all 0.5s ease;
+  }
+  body header nav .nav-menu .container .container-wrap .menu-link .close {
+    display: block;
+    transition: all 0.5s ease;
+  }
+  body header nav .nav-menu .container .container-wrap .menu-link .close a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  body header nav .nav-menu .container .container-wrap .menu-link .menu-item {
+    width: 100%;
+    border-bottom: 1px solid #D7D9DC;
+    padding: 15px;
+  }
+  body header nav .nav-menu .container .container-wrap .menu-link .nav-teg {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  body header nav .nav-menu .container .container-wrap .menu-link .nav-teg a {
+    font-family: "PT Root UI";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #0867D6;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  body header nav .nav-menu .container .container-wrap .menu-link .nav-teg span a i {
+    color: #3A3F43;
+    font-size: 17px;
+    margin-right: 10px;
+  }
+  body header nav .nav-menu .container .container-wrap .menu-link .menu-item:nth-child(12) {
     display: none;
+  }
+  body header nav .nav-menu .container .container-wrap .menu-link.active {
+    right: 0;
+    transition: all 0.5s ease;
+    z-index: 19;
   }
   body header .header-home {
     padding-top: 100px;
@@ -988,6 +1063,9 @@ body #popular-categories .container .container-wrap .categorie-hero .categories-
   }
 }
 @media screen and (max-width: 860px) and (max-width: 430px) {
+  body #popular-categories .container .container-wrap .categories-text h2 {
+    font-size: 25px;
+  }
   body #popular-categories .container .container-wrap .categories-hero-brand {
     padding: 15px 40px;
   }
@@ -996,7 +1074,7 @@ body #popular-categories .container .container-wrap .categorie-hero .categories-
     font-weight: 300;
   }
   body #popular-categories .container .container-wrap h2 {
-    font-size: 20px;
+    font-size: 18px;
     max-width: 100px;
   }
 }
@@ -1013,7 +1091,7 @@ body #bestsellers .container-wrap .flex, body #product .container-wrap .flex {
   margin-bottom: 20px;
 }
 body #bestsellers .container-wrap .flex h1, body #product .container-wrap .flex h1 {
-  font-family: "Circe";
+  font-family: "PT Root UI";
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -1240,7 +1318,8 @@ body #bestsellers .container-wrap .slider .slider_in .item .flex_batton div span
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-  text-decoration-line: line-through;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
   color: #9a9c9e;
 }
 body #bestsellers .container-wrap .slider .slider_in .item .flex_batton div:nth-child(2), body #product .container-wrap .slider .slider_in .item .flex_batton div:nth-child(2) {
@@ -1446,7 +1525,7 @@ body #brands .flex {
   margin-bottom: 20px;
 }
 body #brands .flex h1 {
-  font-family: "Circe";
+  font-family: "PT Root UI";
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -1517,11 +1596,21 @@ body #brands .corusel .item {
   left: 0;
   cursor: pointer;
   transition: all 0.3s ease;
-  animation: anime 5s linear infinite;
-  animation-delay: calc(var(--j) * -1s);
+  -webkit-animation: anime 5s linear infinite;
+          animation: anime 5s linear infinite;
+  -webkit-animation-delay: calc(var(--j) * -1s);
+          animation-delay: calc(var(--j) * -1s);
 }
 body #brands .corusel .item:hover {
   transform: scale(0.9);
+}
+@-webkit-keyframes anime {
+  from {
+    left: -15%;
+  }
+  to {
+    left: 110%;
+  }
 }
 @keyframes anime {
   from {
@@ -1589,7 +1678,7 @@ body #product .flex ul li::after {
   transform: scale(0.01);
 }
 body #product .flex ul li a {
-  font-family: "Circe";
+  font-family: "PT Root UI";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -1628,6 +1717,7 @@ body #advantages .container-wrap {
   margin: 85px auto;
 }
 body #advantages .container-wrap .advantages-types {
+  cursor: pointer;
   flex: 1;
   min-width: 260px;
   max-width: 360px;
@@ -1637,6 +1727,7 @@ body #advantages .container-wrap .advantages-types {
   border-radius: 5px;
   background-color: #f2f5f9;
   padding: 25px 30px;
+  transition: all 0.5s ease;
 }
 body #advantages .container-wrap .advantages-types p {
   font-family: "PT Root UI";
@@ -1644,6 +1735,9 @@ body #advantages .container-wrap .advantages-types p {
   font-size: 18px;
   line-height: 24px;
   color: #3a3f43;
+}
+body #advantages .container-wrap .advantages-types:hover {
+  box-shadow: 0px 5px 30px rgba(63, 66, 69, 0.15);
 }
 body #our-products {
   background-color: #f7f8fb;
@@ -1719,8 +1813,10 @@ body #our-products .container-wrap .our-products-box .our-products-boxes .our-pr
   align-items: center;
   padding: 6px 10px;
   gap: 5px;
+  cursor: pointer;
   width: 130px;
   height: 32px;
+  transition: all 0.5s ease;
   border: 1px solid #e0e1e3;
   border-radius: 5px;
 }
@@ -1768,7 +1864,7 @@ body #about .container .container-wrap ul li {
   font-size: 16px;
   line-height: 22px;
   color: #3A3F43;
-  list-style-type: circle;
+  list-style-type: disc;
 }
 body footer .footer_top {
   background-color: #535E69;
@@ -1959,6 +2055,9 @@ body footer .footer_bottom .container .container-wrap p {
   }
   body footer .footer-main .container .container-wrap {
     flex-direction: column;
+  }
+  body footer .footer-main .container .container-wrap .footer_section_2 .footer_btn button {
+    width: 100%;
   }
   body footer .footer-main .container .container-wrap .footer_section {
     width: 100%;

@@ -42,7 +42,7 @@
                         font-size: 16px;
                         line-height: 22px;
                         color: #3A3F43;
-                        list-style-type: circle; 
+                        list-style-type: disc;
                     }
                 }
             }
@@ -291,6 +291,13 @@
                 .container{
                     .container-wrap{
                         flex-direction: column;
+                        .footer_section_2{
+                            .footer_btn{
+                                button{
+                                    width: 100%;
+                                }
+                            }
+                        }
                         .footer_section{
                             width: 100%;
                             margin-bottom: 20px;
