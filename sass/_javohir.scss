@@ -1,5 +1,6 @@
 @mixin popular-categories {
   #popular-categories {
+    padding-bottom: 100px;
     .container {
       .container-wrap {
         .categories-text {
@@ -21,7 +22,7 @@
               column-gap: 10px;
               align-items: center;
               color: #15191c;
-              font-family: "PT Root UI", sans-serif;
+              font-family: "PT Root UI";
             }
           }
           i {
@@ -68,12 +69,14 @@
               gap: 5px;
 
               h5 {
+                font-family: "PT Root UI";
                 font: {
                   size: 18px;
                   weight: 700;
                 }
               }
               h6 {
+                font-family: "PT Root UI";
                 color: #747883;
                 font: {
                   size: 14px;
@@ -86,89 +89,106 @@
       }
     }
   }
-
-  @media screen and (max-width: 860px) {
-    #popular-categories {
-      .container {
-        .container-wrap {
-          .categorie-hero {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            .categories-hero-brand {
-              padding: 25px 40px;
-              &:nth-child(10) {
-                display: none;
-              }
-            }
-          }
+     @media screen and (max-width: 860px) {
+       #popular-categories {
+         .container {
+           .container-wrap {
+             .categorie-hero {
+               display: grid;
+               grid-template-columns: repeat(3, 1fr);
   
+               .categories-hero-brand {
+                 padding: 25px 40px;
+  
+                 &:nth-child(10) {
+                   display: none;
+                 }
+               }
+             }
+           }
+         }
+  
+       }
+  
+       @media screen and (max-width: 860px) {
+         #popular-categories {
+           .container {
+             .container-wrap {
+               .categorie-hero {
+                 grid-template-columns: repeat(3, 1fr);
+  
+               }
+             }
+           }
+         }
+  
+       }
+  
+       @media screen and (max-width: 640px) {
+         #popular-categories {
+           .container {
+             .container-wrap {
+               .categorie-hero {
+                 display: grid;
+                 grid-template-columns: repeat(2, 1fr);
+  
+                 .categories-hero-brand {
+                   padding: 15px 40px;
+  
+                   h5 {
+                     font-size: 16px;
+                   }
+  
+                   &:nth-child(10) {
+                     display: flex;
+  
+                     h5 {
+                       display: flex;
+                       font-size: 16px;
+                     }
+                   }
+                 }
+               }
+  
+               h2 {
+                 font-size: 24px;
+                 max-width: 151px;
+               }
+  
+               a {
+                 h4 {
+                   font-size: 14px;
+                 }
+               }
+             }
+           }
+         }
+       }
+  
+       @media screen and (max-width: 430px) {
+         #popular-categories {
+           .container {
+             .container-wrap {
+               .categories-hero-brand {
+                 padding: 15px 40px;
+  
+                 h5 {
+                   font-size: 12px;
+                   font-weight: 300;
+                 }
+               }
+  
+               h2 {
+                 font-size: 20px;
+                 max-width: 100px;
+               }
+             }
+           }
+         }
+       }
+  
+       @media screen and (max-width: 345px) {}
+     }
 }
-@media screen and (max-width: 860px) {
-  #popular-categories {
-    .container {
-      .container-wrap {
-        .categorie-hero {
-          grid-template-columns: repeat(3, 1fr);
 
-        }
-      }
-    }
-  }
-  @media screen and (max-width: 640px) {
-    #popular-categories {
-      .container {
-        .container-wrap {
-          .categorie-hero {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            .categories-hero-brand {
-              padding: 15px 40px;
-              h5 {
-                font-size: 16px;
-              }
-              &:nth-child(10) {
-                display: flex;
-                h5 {
-                  display: flex;
-                  font-size: 16px;
-                }
-              }
-            }
-          }
-
-          h2 {
-            font-size: 24px;
-            max-width: 151px;
-          }
-          a {
-            h4 {
-              font-size: 14px;
-            }
-          }
-        }
-      }
-    }
-  }
-  @media screen and (max-width: 430px) {
-    #popular-categories {
-      .container {
-        .container-wrap {
-          .categories-hero-brand {
-            padding: 15px 40px;
-            h5 {
-              font-size: 12px;
-              font-weight: 300;
-            }
-          }
-          h2 {
-            font-size: 20px;
-            max-width: 100px;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 345px) {}
-}
+ 
