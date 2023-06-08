@@ -5,8 +5,9 @@
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
+                padding: 60px 0;
                 h1{
-                    font-family: 'Circe';
+                    font-family: 'PT Root UI';
                     font-style: normal;
                     font-weight: 700;
                     font-size: 32px;
@@ -21,7 +22,6 @@
                     font-size: 16px;
                     line-height: 22px;
                     color: #15191C;
-                    width: 1170px;
                 }
 
                 h3{
@@ -49,9 +49,9 @@
         }
     }
 }
+
 @mixin footer {
     footer{
-        // background: #535E69;
         .footer_top{
             background-color: #535E69;
             .container{
@@ -59,7 +59,6 @@
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    gap: 40px; 
                     padding: 24px 0;
                     
                     .footer_top_main{
@@ -67,6 +66,17 @@
                         display: flex;
                         align-items: center;
                         gap: 20px;
+                        img{
+                            cursor: pointer;
+                        }
+                        p{
+                            font-family: 'PT Root UI';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 28px;
+                            color: #FFFFFF;
+                        }
                         span{
                             display: block;
                             width: 25px;
@@ -75,6 +85,7 @@
                             padding: 3px 7px;
                             border: 1px solid #FFFFFF;
                             background: #9A9C9E;
+                            cursor: pointer;
                         }
                         
                     }
@@ -83,12 +94,13 @@
         }
 
         .footer-main{
+            padding: 40px 0;
             .container{
                 .container-wrap{
                     display: flex;
                     justify-content: space-between;
                     padding: 40px 0 20px 0;
-                    background: #F7F8FB;
+                   
                     .footer_section{
                         .footer_logo{
                             margin-bottom: 20px;
@@ -97,6 +109,14 @@
                             display: flex;
                             gap: 14px;
                             margin-bottom: 15px;
+                            p{
+                                font-family: 'PT Root UI';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 22px;
+                                color: #15191C;
+                            }
                         }
                         .footer_stars{
                             background-color: #F7F8FB;
@@ -159,7 +179,7 @@
                         }
 
                         h1{
-                            font-family: 'Circe';
+                            font-family: 'PT Root UI';
                             font-style: normal;
                             font-weight: 700;
                             font-size: 24px;
@@ -199,9 +219,97 @@
         }
 
         .footer_bottom{
-            display: flex;
-            justify-content: space-around;
-            padding: 21px 0;
+            background: #F7F8FB;
+            .container{
+                .container-wrap{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 21px 0;
+                    p{
+                        font-family: 'PT Root UI';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 18px;
+                        color: #3A3F43;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width:1100px){
+        footer{
+            .footer_top{
+                .container{
+                    .container-wrap{
+                        .footer_top_main{
+                            flex-direction: column;
+                            p{
+                                font-size: 16px;
+                            }
+                            span{
+                                display: none;
+                            }
+                        }
+                        .liner{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width:900px){
+        footer{
+            .footer-main{
+                .container{
+                    .container-wrap{
+                        .footer_section_2 {
+                                h1 {
+                                    font-size: 18px;
+                                }
+                        
+                                p {
+                                    font-size: 14px;
+                                }
+                                h3{
+                                    font-size: 16px;
+                                }
+                            }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width:730px){
+        footer{
+            background: #F7F8FB;
+            .footer_top{
+                display: none;
+            }
+            .footer-main{
+                .container{
+                    .container-wrap{
+                        flex-direction: column;
+                        .footer_section{
+                            width: 100%;
+                            margin-bottom: 20px;
+                        }
+                        .fooer_media{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .footer_bottom{
+                .container{
+                    .container-wrap{
+                        flex-direction: column;
+                        gap: 10px;
+                    }
+                }
+                padding-bottom: 100px;
+            }
         }
     }
 }

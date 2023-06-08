@@ -1338,7 +1338,7 @@ body #our-products {
   padding: 60px;
 }
 body #our-products .container-wrap h2 {
-  font-family: "Circe";
+  font-family: "PT Root UI";
   font-weight: 700;
   font-size: 32px;
   line-height: 46px;
@@ -1420,9 +1420,10 @@ body #about .container .container-wrap {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 60px 0;
 }
 body #about .container .container-wrap h1 {
-  font-family: "Circe";
+  font-family: "PT Root UI";
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -1436,7 +1437,6 @@ body #about .container .container-wrap p {
   font-size: 16px;
   line-height: 22px;
   color: #15191C;
-  width: 1170px;
 }
 body #about .container .container-wrap h3 {
   font-family: "PT Root UI";
@@ -1465,13 +1465,23 @@ body footer .footer_top .container .container-wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
   padding: 24px 0;
 }
 body footer .footer_top .container .container-wrap .footer_top_main {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+body footer .footer_top .container .container-wrap .footer_top_main img {
+  cursor: pointer;
+}
+body footer .footer_top .container .container-wrap .footer_top_main p {
+  font-family: "PT Root UI";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: #FFFFFF;
 }
 body footer .footer_top .container .container-wrap .footer_top_main span {
   display: block;
@@ -1481,12 +1491,15 @@ body footer .footer_top .container .container-wrap .footer_top_main span {
   padding: 3px 7px;
   border: 1px solid #FFFFFF;
   background: #9A9C9E;
+  cursor: pointer;
+}
+body footer .footer-main {
+  padding: 40px 0;
 }
 body footer .footer-main .container .container-wrap {
   display: flex;
   justify-content: space-between;
   padding: 40px 0 20px 0;
-  background: #F7F8FB;
 }
 body footer .footer-main .container .container-wrap .footer_section .footer_logo {
   margin-bottom: 20px;
@@ -1495,6 +1508,14 @@ body footer .footer-main .container .container-wrap .footer_section .footer_sect
   display: flex;
   gap: 14px;
   margin-bottom: 15px;
+}
+body footer .footer-main .container .container-wrap .footer_section .footer_section_tell p {
+  font-family: "PT Root UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #15191C;
 }
 body footer .footer-main .container .container-wrap .footer_section .footer_stars {
   background-color: #F7F8FB;
@@ -1549,7 +1570,7 @@ body footer .footer-main .container .container-wrap .footer_section_2 .footer_se
   width: 180px;
 }
 body footer .footer-main .container .container-wrap .footer_section_2 h1 {
-  font-family: "Circe";
+  font-family: "PT Root UI";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -1577,7 +1598,68 @@ body footer .footer-main .container .container-wrap .footer_section_2 .footer_bt
   color: #3697E2;
 }
 body footer .footer_bottom {
+  background: #F7F8FB;
+}
+body footer .footer_bottom .container .container-wrap {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 21px 0;
+}
+body footer .footer_bottom .container .container-wrap p {
+  font-family: "PT Root UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #3A3F43;
+}
+@media (max-width: 1100px) {
+  body footer .footer_top .container .container-wrap .footer_top_main {
+    flex-direction: column;
+  }
+  body footer .footer_top .container .container-wrap .footer_top_main p {
+    font-size: 16px;
+  }
+  body footer .footer_top .container .container-wrap .footer_top_main span {
+    display: none;
+  }
+  body footer .footer_top .container .container-wrap .liner {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  body footer .footer-main .container .container-wrap .footer_section_2 h1 {
+    font-size: 18px;
+  }
+  body footer .footer-main .container .container-wrap .footer_section_2 p {
+    font-size: 14px;
+  }
+  body footer .footer-main .container .container-wrap .footer_section_2 h3 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 730px) {
+  body footer {
+    background: #F7F8FB;
+  }
+  body footer .footer_top {
+    display: none;
+  }
+  body footer .footer-main .container .container-wrap {
+    flex-direction: column;
+  }
+  body footer .footer-main .container .container-wrap .footer_section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  body footer .footer-main .container .container-wrap .fooer_media {
+    display: none;
+  }
+  body footer .footer_bottom {
+    padding-bottom: 100px;
+  }
+  body footer .footer_bottom .container .container-wrap {
+    flex-direction: column;
+    gap: 10px;
+  }
 }/*# sourceMappingURL=main.css.map */
