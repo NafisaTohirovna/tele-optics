@@ -51,4 +51,117 @@ homeSwiper();
 
 // o'ktamni qismi boshlandi 
 
+let miniItem = document.querySelectorAll(".mini_item")
+let miniSliderBox = document.querySelectorAll(".mini_slider_box")
+let number = miniItem.length
+
+Array.from(Array(number).keys()).map((item) => {
+
+  miniItem[item].addEventListener('scroll' , () => {
+    if(miniItem[item].scrollLeft >= 0 && miniItem[item].scrollLeft < 200){
+      miniSliderBox[item].children[0].style.background = "#9a9c9e"
+    }
+    else{
+      miniSliderBox[item].children[0].style.background = "#d7d9dc"
+    }
+    if(miniItem[item].scrollLeft >= 200 && miniItem[item].scrollLeft < 420){
+      miniSliderBox[item].children[1].style.background = "#9a9c9e"
+    }
+    else{
+      miniSliderBox[item].children[1].style.background = "#d7d9dc"
+    }
+    if(miniItem[item].scrollLeft >= 420 && miniItem[item].scrollLeft < 700){
+      miniSliderBox[item].children[2].style.background = "#9a9c9e"
+    }
+    else{
+      miniSliderBox[item].children[2].style.background = "#d7d9dc"
+    }
+    if(miniItem[item].scrollLeft >= 700 ){
+      miniSliderBox[item].children[3].style.background = "#9a9c9e"
+    }
+    else{
+      miniSliderBox[item].children[3].style.background = "#d7d9dc"
+    }
+  })
+
+  miniSliderBox[item].children[0].addEventListener("click" , () => {
+    miniItem[item].scrollLeft = 0
+  })
+
+  miniSliderBox[item].children[1].addEventListener("click" , () => {
+    miniItem[item].scrollLeft = 240
+  })
+
+  miniSliderBox[item].children[2].addEventListener("click" , () => {
+    miniItem[item].scrollLeft = 478
+  })
+
+  miniSliderBox[item].children[3].addEventListener("click" , () => {
+    miniItem[item].scrollLeft = 719
+  })
+})
+
+let sliderIn = document.querySelectorAll(".slider_in")
+let sliderBox = document.querySelectorAll(".slider_box")
+let numberTwo = sliderBox.length
+
+Array.from(Array(numberTwo).keys()).map((item) => {
+  sliderIn[item].addEventListener("scroll" , () => {
+    if(sliderIn[item].scrollLeft < 1180){
+      sliderBox[item].children[0].style.background = '#9a9c9e';
+    }
+    else
+    {
+      sliderBox[item].children[0].style.background = '#d7d9dc';
+    }
+    if(sliderIn[item].scrollLeft >= 1180 && sliderIn[item].scrollLeft < 2382){
+      sliderBox[item].children[1].style.background = '#9a9c9e';
+    }
+    else
+    {
+      sliderBox[item].children[1].style.background = '#d7d9dc';
+    }
+    if(sliderIn[item].scrollLeft >= 2382 && sliderIn[item].scrollLeft < 3563){
+      sliderBox[item].children[2].style.background = '#9a9c9e';
+    }
+    else
+    {
+      sliderBox[item].children[2].style.background = '#d7d9dc';
+    }
+    if(sliderIn[item].scrollLeft >= 3563 && sliderIn[item].scrollLeft < 4500){
+      sliderBox[item].children[3].style.background = '#9a9c9e';
+    }
+    else
+    {
+      sliderBox[item].children[3].style.background = '#d7d9dc';
+    }
+    if(sliderIn[item].scrollLeft >= 4500){
+      sliderBox[item].children[4].style.background = '#9a9c9e';
+    }
+    else
+    {
+      sliderBox[item].children[4].style.background = '#d7d9dc';
+    }
+  })
+  sliderBox[item].children[4].addEventListener('click' , () => {
+    sliderIn[item].scrollLeft = 4500
+  })
+  
+  sliderBox[item].children[3].addEventListener('click' , () => {
+    sliderIn[item].scrollLeft = 3563
+  })
+
+  sliderBox[item].children[2].addEventListener('click' , () => {
+    sliderIn[item].scrollLeft = 2382
+  })
+
+  sliderBox[item].children[1].addEventListener('click' , () => {
+    sliderIn[item].scrollLeft = 1180
+  })
+
+  sliderBox[item].children[0].addEventListener('click' , () => {
+    sliderIn[item].scrollLeft = 0
+  })
+
+})
 
