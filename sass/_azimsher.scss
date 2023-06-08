@@ -1,13 +1,137 @@
-$grey: #F7F8FB;
+$grey: #f7f8fb;
+$grey-border: #e0e1e3;
+$grey-another: #3a3f43;
+$bluelike-grey: #f2f5f9;
+$white: #fff;
+$yellow: #f1da0980;
+$black: #15191c;
+$blue: #3697e2;
+
+@mixin d-column($gap) {
+  display: flex;
+  gap: $gap;
+}
 
 @mixin advantages {
-    #advantages{
+  #advantages {
+    .container-wrap {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin: 85px 0;
+      .advantages-types {
+        flex: 1;
+        min-width: 260px;
+        max-width: 360px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        background-color: $bluelike-grey;
+        padding: 25px 30px;
 
+        p {
+          font-family: "PT Root UI";
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 24px;
+
+          color: $grey-another;
+        }
+      }
     }
+  }
 }
+
 @mixin our-products {
-    #our-products{
-        background-color: $grey;
-        padding: 60px;
+  #our-products {
+    background-color: $grey;
+    padding: 60px;
+    .container-wrap {
+      h2 {
+        font-family: "PT Root UI";
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 46px;
+        margin-bottom: 20px;
+      }
+      .our-products-box {
+        display: grid;
+        place-content: center;
+        grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+        gap: 20px;
+        .our-products-boxes {
+          @include d-column(20px);
+          padding: 25px;
+          background-color: white;
+          .our-products-boxes-left {
+            width: 70px;
+            height: 70px;
+            display: grid;
+            place-items: center;
+            background-color: $yellow;
+            padding: 19px 14px;
+            border-radius: 10px;
+          }
+          .our-products-boxes-right {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            h5 {
+              font-family: "PT Root UI";
+              font-weight: 700;
+              font-size: 18px;
+              line-height: 24px;
+
+              color: $black;
+            }
+            .our-products-boxes-right-text {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              p {
+                font-family: "PT Root UI";
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 22px;
+                //  display: flex;
+
+                color: $grey-another;
+                span {
+                  font-weight: 500;
+                  font-size: 12px;
+                  line-height: 16px;
+                }
+              }
+              .our-products-boxes-right-text-special {
+                color: $blue;
+              }
+            }
+            button {
+              font-family: "PT Root UI";
+              color: $blue;
+              background-color: $white;
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              padding: 6px 10px;
+              gap: 5px;
+
+              width: 130px;
+              height: 32px;
+
+              border: 1px solid $grey-border;
+              border-radius: 5px;
+              &:hover {
+                background-color: $blue;
+                color: $white;
+              }
+            }
+          }
+        }
+      }
     }
+  }
 }
