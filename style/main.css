@@ -1925,6 +1925,7 @@ body footer .footer-main .container .container-wrap {
   display: flex;
   justify-content: space-between;
   padding: 40px 0 20px 0;
+  gap: 20px;
 }
 body footer .footer-main .container .container-wrap .footer_section .footer_logo {
   margin-bottom: 20px;
