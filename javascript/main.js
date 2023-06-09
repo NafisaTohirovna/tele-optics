@@ -8,6 +8,7 @@ const Close = document.querySelector(".close");
 headerBars.addEventListener("click" , ()=>{
     headerBars.classList.toggle("active");
     navMenu.classList.toggle("active");
+    MenuLink.classList.remove("active");
 })
 
 navTeg.addEventListener("click",()=>{
